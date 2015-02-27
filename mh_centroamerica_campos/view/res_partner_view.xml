@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="view_res_partner_mh_form_inherit" model="ir.ui.view">
+            <field name="name">base.view_partner_form.mh.inherit</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <xpath expr="/form/sheet/notebook/page[@name='internal_notes']" position="before">
+                       <page name="mh_fields" string="Shipping">
+                            <div align="right">
+                                <group>
+                                    <field name="mh_shipping_name"/>
+                                    <field name="mh_shipping_street"/>
+                                    <field name="mh_shipping_numin"/>
+                                    <field name="mh_shipping_ext"/>
+                                    <field name="mh_shipping_colony"/>
+                                    <field name="mh_shipping_zip"/>
+                                </group>
+                            </div>
+                            <div>
+                                <group>
+                                    <field name="mh_shipping_city"/>
+                                    <field name="mh_shipping_state"/>
+                                    <field name="mh_shipping_date"/>
+                                    <field name="mh_shipping_email"/>
+                                    <field name="mh_shipping_phone"/>
+                                    <field name="mh_shipping_celphone"/>
+                                    <field name="mh_shipping_scheduler"/>
+                                </group>
+                            </div>
+                        </page>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</openerp>

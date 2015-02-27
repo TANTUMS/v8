@@ -21,22 +21,23 @@
 # Coded by: Said Kuri Nunez (skuri@tantums.com)
 ##############################################################################
 {
-    'name' : 'Campos_MH_Centroamerica',
+    'name' : 'Reportes Shadow',
     'version' : '1.0',
     'author' : 'Adtech',
-    'summary': 'Campos de las tablas de dims que no contiene TantumsERP',
+    'summary': 'Reportes para proyecto Almacen Shadow',
     'description': """
-Campos Faltantes        
+Reportes que cubren operaciones de envio a Dims        
 =====================================================
-Campos que contiene Megaweb necesarios para una correcta sincronizacion
+    - Reporte de Picking List para proceder al llenado de cajas
+    - Reporte de Nota de envio
     """,
-    'category': 'Mrp',
+    'category': 'MH',
     'sequence': 4,
     'website' : 'http://www.adtech.com.mx',
     'images' : [],
-    'depends' : ['base','sale'],
+    'depends' : ['base','sale','stock'],
     'demo' : [],
-    'data' : ['view/sale_order_view.xml','view/res_partner_view.xml'],
+    'data' : ['report/report_picking_list.xml'],
     'test' : [],
     'auto_install': False,  
     'application': True,

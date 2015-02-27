@@ -20,25 +20,21 @@
 ##############################################################################
 # Coded by: Said Kuri Nunez (skuri@tantums.com)
 ##############################################################################
-{
-    'name' : 'Campos_MH_Centroamerica',
-    'version' : '1.0',
-    'author' : 'Adtech',
-    'summary': 'Campos de las tablas de dims que no contiene TantumsERP',
-    'description': """
-Campos Faltantes        
-=====================================================
-Campos que contiene Megaweb necesarios para una correcta sincronizacion
-    """,
-    'category': 'Mrp',
-    'sequence': 4,
-    'website' : 'http://www.adtech.com.mx',
-    'images' : [],
-    'depends' : ['base','sale'],
-    'demo' : [],
-    'data' : ['view/sale_order_view.xml','view/res_partner_view.xml'],
-    'test' : [],
-    'auto_install': False,  
-    'application': True,
-    'installable': True,
-}
+
+from openerp.tools.translate import _
+from openerp.osv import osv, fields
+import datetime
+import openerp.exceptions
+import openerp.addons
+
+
+class sale_order(osv.osv):
+    _inherit = 'sale.order'
+    _columns = {
+                   'shipping_address_sale': fields.text('Śhipphing Address'),
+                   'official_consecutive':  fields.integer('Official Consecutive'),
+                   'id_shop': fields.char('Id Shop', size=12),
+                   'id_dim' : fields.integer('Id Dim'),
+                   'ref_nova_invoice': fields.char('Nova Invoice' , size=50),
+                }
+sale_order()

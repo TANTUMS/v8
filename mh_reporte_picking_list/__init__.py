@@ -20,25 +20,3 @@
 ##############################################################################
 # Coded by: Said Kuri Nunez (skuri@tantums.com)
 ##############################################################################
-{
-    'name' : 'Campos_MH_Centroamerica',
-    'version' : '1.0',
-    'author' : 'Adtech',
-    'summary': 'Campos de las tablas de dims que no contiene TantumsERP',
-    'description': """
-Campos Faltantes        
-=====================================================
-Campos que contiene Megaweb necesarios para una correcta sincronizacion
-    """,
-    'category': 'Mrp',
-    'sequence': 4,
-    'website' : 'http://www.adtech.com.mx',
-    'images' : [],
-    'depends' : ['base','sale'],
-    'demo' : [],
-    'data' : ['view/sale_order_view.xml','view/res_partner_view.xml'],
-    'test' : [],
-    'auto_install': False,  
-    'application': True,
-    'installable': True,
-}

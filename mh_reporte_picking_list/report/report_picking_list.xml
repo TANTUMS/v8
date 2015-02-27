@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <report id="report_stock_piking_webkit"
+        model="stock.picking"
+        name="picking.list"
+        file="mh_reporte_picking_list/report/report_picking_list.mako"
+        string="Picking List"
+        report_type="webkit"
+        auto="False" menu="True"/>
+    </data>
+</openerp>

@@ -76,5 +76,18 @@ class res_partner(osv.osv):
                 'modified_on': fields.char('Modified On', size=255),
                 'string1': fields.char('String1', size=50),
                 'string2': fields.char('String 2', size=50),
+                'mh_shipping_name': fields.char(' Shipping Name', size=50),
+                'mh_shipping_street': fields.char(' Shipping Street', size=50),
+                'mh_shipping_numin': fields.integer(' Shipping Num In'),
+                'mh_shipping_ext': fields.integer(' Shipping Num Ext'),
+                'mh_shipping_colony': fields.char(' Shipping Colony', size=50),
+                'mh_shipping_zip': fields.char(' Shipping Zip', size=50),
+                'mh_shipping_city': fields.char('City', size=50),
+                'mh_shipping_state': fields.char(' Shipping State', size=50),
+                'mh_shipping_date': fields.date(' Shipping Date'),
+                'mh_shipping_email': fields.char(' Shipping Email', size=50),
+                'mh_shipping_phone': fields.char(' Shipping Phone', size=50),
+                'mh_shipping_celphone': fields.char(' Shipping Cel Phone', size=50),
+                'mh_shipping_scheduler': fields.char(' Shipping Scheduler', size=255),
                 }
 res_partner()
