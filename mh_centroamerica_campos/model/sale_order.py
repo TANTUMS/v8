@@ -1,4 +1,4 @@
-    # -*- coding: utf-8 -*-
+	    # -*- coding: utf-8 -*-
 ##############################################################################
 #
 #    OpenERP, Open Source Management Solution
@@ -36,5 +36,13 @@ class sale_order(osv.osv):
                    'id_shop': fields.char('Id Shop', size=12),
                    'id_dim' : fields.integer('Id Dim'),
                    'ref_nova_invoice': fields.char('Nova Invoice' , size=50),
+
                 }
 sale_order()
+
+class sale_order_line(osv.osv):
+	_inherit = 'sale.order.line'
+	_columns = {
+				'id_operation_detail': fields.char('Operation Detail', size=36),
+				}
+sale_order_line()
