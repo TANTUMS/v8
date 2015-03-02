@@ -1,0 +1,5 @@
+ <?xml version="1.0"?>
+<search string="Search Sales by official">
+                    <field name="official_consecutive" string="official_consecutive Order"/>
+</search>
+            

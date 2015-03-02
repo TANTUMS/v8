@@ -28,12 +28,12 @@
                 <td width="20%" colspan="1"><p>Prometido : ${objects.date_min}</p></td>
                 <td width="20%" colspan="1" align="left"><font size="50"><p>DIM ${objects.group_id.id_dim}</p></font></td>
             </tr>
-            <tr>
-                    <td width="20%" align="center">Descripcion</td>
-                    <td width="20%" align="center">No Art Cliente</td>
-                    <td width="20%" align="center">Emb</td>
-                    <td width="20%" align="center">UM</td>
-                    <td width="20%" align="center"></td>
+            <tr >
+                    <td width="20%" align="center"  style="border-bottom:2px double #000;">Descripcion</td>
+                    <td width="20%" align="center"  style="border-bottom:2px double #000;">No Art Cliente</td>
+                    <td width="20%" align="center"  style="border-bottom:2px double #000;">Emb</td>
+                    <td width="20%" align="center"  style="border-bottom:2px double #000;">UM</td>
+                    <td width="20%" align="center"  style="border-bottom:2px double #000;"> </td>
                
             </tr>
         %for line in objects.move_lines:

@@ -34,9 +34,10 @@ Campos que contiene Megaweb necesarios para una correcta sincronizacion
     'sequence': 4,
     'website' : 'http://www.adtech.com.mx',
     'images' : [],
-    'depends' : ['base','sale'],
+    'depends' : ['base','sale','delivery'],
     'demo' : [],
     'data' : ['view/sale_order_view.xml','view/res_partner_view.xml'],
+    #,'view/sale_order_search_view.xml'
     'test' : [],
     'auto_install': False,  
     'application': True,
