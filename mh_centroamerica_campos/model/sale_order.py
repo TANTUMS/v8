@@ -34,9 +34,8 @@ class sale_order(osv.osv):
     def _shipping(self,cr,uid,ids,shipping_address_sale,arg,context=None):
       so = self.pool.get('sale.order').browse(cr, uid, ids).partner_id.id
       shipping = self.pool.get('res.partner').browse(cr,uid,so)
-
-      shipping_address = str(shipping.mh_shipping_name) + '/' + str(shipping.mh_shipping_street) + '/' + str(shipping.mh_shipping_numin) + '/' + str(shipping.mh_shipping_ext)+ '/' + str(shipping.mh_shipping_colony)
-      shipping_address = shipping_address + '/' + str(shipping.mh_shipping_zip)+ '/' + str(shipping.mh_shipping_city)
+      shipping_address = str(shipping.mh_shipping_name) + '\n'  + str(shipping.mh_shipping_street) + '\n'  + str(shipping.mh_shipping_numin) + '\n' + str(shipping.mh_shipping_ext)+ '\n'   + str(shipping.mh_shipping_colony)
+      shipping_address = shipping_address + '\n'  + str(shipping.mh_shipping_zip)+ '\n'  + str(shipping.mh_shipping_city)
       res={}
       for r in ids:
           res[r] = shipping_address
@@ -44,16 +43,33 @@ class sale_order(osv.osv):
 
     def _guide(self,cr,uid,ids,shipping_address_sale,arg,context=None):
       so = self.pool.get('sale.order').browse(cr, uid, ids)
+      if so.procurement_group_id:
+        picking_ids = self.pool.get('stock.picking').search(cr,uid,[('group_id','=', so.procurement_group_id.id)])
+        picking = self.pool.get('stock.picking').browse(cr,uid,picking_ids)
+        res={}
+        for r in ids:
+          res[r] = str(picking.name)+ '\n' + str(picking.carrier_id.name) + '\n' + str(picking.carrier_tracking_ref) 
+        return res
+      else:
+        res={}
+        for r in ids:
+          res[r] = str('SIN GUIA ASIGNADA') 
+        return res
 
-      print so.id
-      picking_ids = self.pool.get('stock.picking').search(cr,uid,[('group_id','=',so.id)])
-      print picking_ids
-      picking = self.pool.get('stock.picking').browse(cr,uid,picking_ids)
-      print picking
-      res={}
-      for r in ids:
-          res[r] = str(picking.name)+ '\n' + str(picking.carrier_tracking_ref) 
-      return res
+    def  _date_done(self,cr,uid,ids,shipping_address_sale,arg,context=None):
+      so = self.pool.get('sale.order').browse(cr, uid, ids)
+      if so.procurement_group_id:
+        picking_ids = self.pool.get('stock.picking').search(cr,uid,[('group_id','=', so.procurement_group_id.id)])
+        picking = self.pool.get('stock.picking').browse(cr,uid,picking_ids)
+        res={}
+        for r in ids:
+          res[r] = str(picking.date_done) 
+        return res
+      else:
+        res={}
+        for r in ids:
+          res[r] = str('NO HA SALIDO') 
+        return res
 
     _columns = {
                    'shipping_address_sale': fields.function(_shipping,type='text',string='Shipping Adress'),
@@ -61,7 +77,8 @@ class sale_order(osv.osv):
                    'id_shop': fields.char('Id Shop', size=12),
                    'id_dim' : fields.integer('Id Dim'),
                    'ref_nova_invoice': fields.char('Nova Invoice' , size=50),
-                   'package_guide' : fields.function(_guide,type='text',string='Guide')
+                   'package_guide' : fields.function(_guide,type='text',string='Guide'),
+                   'date_done_shipping' : fields.function(_date_done,type='text',string='date_done')
 
                 }
     

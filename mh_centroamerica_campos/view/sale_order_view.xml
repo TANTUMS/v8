@@ -9,15 +9,50 @@
             <field name="arch" type="xml">
                 <xpath expr="/form/sheet/group/group/field[@name='partner_id']" position="after">
                     <field name="shipping_address_sale"/>
-                    <field name="official_consecutive"/>
-                    <field name="ref_nova_invoice"/>
+                    <field name="official_consecutive" readonly="1"/>
+                    <field name="ref_nova_invoice" readonly="1"/>
                     <field name="package_guide"/>
+                    <field name="date_done_shipping" readonly="1"/>
                 </xpath>
                  <xpath expr="/form/sheet/group/group[2]/field[@name='currency_id']" position="after">
-                    <field name="id_shop"/>
-                    
+                    <field name="id_shop" readonly="1"/>
+                    <h1>
+                        <label string="DIM"/>
+                        <field name="id_dim" class="oe_inline" readonly="1"/>
+                    </h1>
                 </xpath>
             </field>
         </record>
+        <record id="inherit_view_search_mh_sales_filter" model="ir.ui.view">
+            <field name="name">MH Sales </field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_sales_order_filter" />
+            <field name="arch" type="xml">
+
+               <!-- add your filtre at the end -->
+                <xpath expr="filter[@string='Quotations']" position="after">
+                    <field name="official_consecutive" string="Ticket"/>
+                    <field name="id_dim" string="DIM"/>
+                </xpath>
+
+               <!-- add your group at the end -->
+                <!-- <xpath expr="//filter[@string='Creation']"  position="after">
+                    <filter string="My Groupe" domain="[]" context="{'group_by':'name'}"/>
+                </xpath>  -->                                   
+                </field>
+            </record>
+            <record id="inherit_view_tree_mh_sales_filter" model="ir.ui.view">
+                <field name="name">MH Sales tree </field>
+                <field name="model">sale.order</field>
+                <field name="inherit_id" ref="sale.view_order_tree" />
+                <field name="arch" type="xml">
+
+                    <xpath expr="field[@name='name']" position="after">
+                        <field name="official_consecutive" string="Ticket"/>
+                        <field name="id_dim" string="DIM"/>
+                    </xpath>
+
+                </field>
+            </record>
     </data>
 </openerp>

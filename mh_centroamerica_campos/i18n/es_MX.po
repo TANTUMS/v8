@@ -1,0 +1,380 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* mh_centroamerica_campos
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-03-03 05:17+0000\n"
+"PO-Revision-Date: 2015-03-02 23:32-0600\n"
+"Last-Translator: Said Kuri <skuri@adtech.com.mx>\n"
+"Language-Team: Adtech\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: es_MX\n"
+"X-Generator: Poedit 1.5.4\n"
+
+#. module: mh_centroamerica_campos
+#: field:res.partner,mh_shipping_celphone:0
+msgid " Shipping Cel Phone"
+msgstr "Celular "
+
+#. module: mh_centroamerica_campos
+#: field:res.partner,mh_shipping_colony:0
+msgid " Shipping Colony"
+msgstr "Ciudad"
+
+#. module: mh_centroamerica_campos
+#: field:res.partner,mh_shipping_date:0
+msgid " Shipping Date"
+msgstr "Fecha de envío"
+
+#. module: mh_centroamerica_campos
+#: field:res.partner,mh_shipping_email:0
+msgid " Shipping Email"
+msgstr "Email"
+
+#. module: mh_centroamerica_campos
+#: field:res.partner,mh_shipping_name:0
+msgid " Shipping Name"
+msgstr "Nombre"
+
+#. module: mh_centroamerica_campos
+#: field:res.partner,mh_shipping_ext:0
+msgid " Shipping Num Ext"
+msgstr "Num Ext"
+
+#. module: mh_centroamerica_campos
+#: field:res.partner,mh_shipping_numin:0
+msgid " Shipping Num In"
+msgstr " Num In"
+
+#. module: mh_centroamerica_campos
+#: field:res.partner,mh_shipping_phone:0
+msgid " Shipping Phone"
+msgstr "Teléfono"
+
+#. module: mh_centroamerica_campos
+#: field:res.partner,mh_shipping_scheduler:0
+msgid " Shipping Scheduler"
+msgstr "Horario de preferencia"
+
+#. module: mh_centroamerica_campos
+#: field:res.partner,mh_shipping_state:0
+msgid " Shipping State"
+msgstr "Estado"
+
+#. module: mh_centroamerica_campos
+#: field:res.partner,mh_shipping_street:0
+msgid " Shipping Street"
+msgstr "Calle"
+
+#. module: mh_centroamerica_campos
+#: field:res.partner,mh_shipping_zip:0
+msgid " Shipping Zip"
+msgstr "Código Postal"
+
+#. module: mh_centroamerica_campos
+#: field:res.partner,bank_account:0
+msgid "Bank Account"
+msgstr "Cuenta Bancaria"
+
+#. module: mh_centroamerica_campos
+#: field:res.partner,curp:0
+msgid "CURP"
+msgstr "CURP"
+
+#. module: mh_centroamerica_campos
+#: field:res.partner,calification:0
+msgid "Calification"
+msgstr "Calificación"
+
+#. module: mh_centroamerica_campos
+#: field:res.partner,mh_shipping_city:0
+msgid "City"
+msgstr "Ciudad"
+
+#. module: mh_centroamerica_campos
+#: field:res.partner,co_holder:0
+msgid "CoHolder"
+msgstr "CoHolder"
+
+#. module: mh_centroamerica_campos
+#: field:res.partner,consignable:0
+msgid "Consignable"
+msgstr "Consignable"
+
+#. module: mh_centroamerica_campos
+#: field:res.partner,consignable_amount:0
+msgid "Consignable Amount"
+msgstr "Cantidad Consignable"
+
+#. module: mh_centroamerica_campos
+#: field:res.partner,consignable_amount_date:0
+msgid "Consignable Amount Date"
+msgstr "Fecha Consignable "
+
+#. module: mh_centroamerica_campos
+#: field:res.partner,consignable_amount_in_last_cut:0
+msgid "Consignable Amount in Last Cut"
+msgstr "Consignable Amount in Last Cut"
+
+#. module: mh_centroamerica_campos
+#: field:res.partner,credit_amount:0
+msgid "Credit Amount"
+msgstr "Credit Amount"
+
+#. module: mh_centroamerica_campos
+#: field:res.partner,credit_amount_date:0
+msgid "Credit Amount Date"
+msgstr "Credit Amount Date"
+
+#. module: mh_centroamerica_campos
+#: field:res.partner,credit_amountin_last_cut:0
+msgid "Credit Amount in Last Cut"
+msgstr "Credit Amount in Last Cut"
+
+#. module: mh_centroamerica_campos
+#: view:sale.order:mh_centroamerica_campos.inherit_view_search_mh_sales_filter
+#: view:sale.order:mh_centroamerica_campos.inherit_view_tree_mh_sales_filter
+#: view:sale.order:mh_centroamerica_campos.view_sale_order_form_inherit
+msgid "DIM"
+msgstr "DIM"
+
+#. module: mh_centroamerica_campos
+#: field:res.partner,discount_percent:0
+msgid "Discount Percent"
+msgstr "Discount Percent"
+
+#. module: mh_centroamerica_campos
+#: field:res.partner,exterior_number:0 field:res.partner,notes:0
+msgid "Exterior Number"
+msgstr "Exterior Number"
+
+#. module: mh_centroamerica_campos
+#: field:sale.order,package_guide:0
+msgid "Guide"
+msgstr "Guía"
+
+#. module: mh_centroamerica_campos
+#: field:res.partner,has_address_proof:0
+msgid "Has Adress Proof"
+msgstr "Has Adress Proof"
+
+#. module: mh_centroamerica_campos
+#: field:res.partner,id_bank:0
+msgid "ID Bank"
+msgstr "ID Bank"
+
+#. module: mh_centroamerica_campos
+#: field:res.partner,id_difussion_media:0
+msgid "ID Diffussion Media"
+msgstr "ID Diffussion Media"
+
+#. module: mh_centroamerica_campos
+#: field:res.partner,id_dim:0
+msgid "ID Dim"
+msgstr "DIM"
+
+#. module: mh_centroamerica_campos
+#: field:res.partner,id_iva_group:0
+msgid "ID Iva Group"
+msgstr "ID Iva Group"
+
+#. module: mh_centroamerica_campos
+#: field:res.partner,id_marital_status:0
+msgid "ID Marital Status"
+msgstr "ID Marital Status"
+
+#. module: mh_centroamerica_campos
+#: field:res.partner,id_sex:0
+msgid "ID Sex"
+msgstr "ID Sex"
+
+#. module: mh_centroamerica_campos
+#: field:sale.order,id_dim:0
+msgid "Id Dim"
+msgstr "Id Dim"
+
+#. module: mh_centroamerica_campos
+#: field:res.partner,is_OfficialId:0
+msgid "Id Official ?"
+msgstr "Id Official ?"
+
+#. module: mh_centroamerica_campos
+#: field:sale.order,id_shop:0
+msgid "Id Shop"
+msgstr "Tienda"
+
+#. module: mh_centroamerica_campos
+#: field:res.partner,id_type:0
+msgid "Id Type MegaWeb"
+msgstr "Id Type MegaWeb"
+
+#. module: mh_centroamerica_campos
+#: field:res.partner,interior_number:0
+msgid "Interior Number"
+msgstr "Interior Number"
+
+#. module: mh_centroamerica_campos
+#: field:res.partner,key_account:0
+msgid "Key bank_account"
+msgstr "Key bank_account"
+
+#. module: mh_centroamerica_campos
+#: field:res.partner,last_name:0
+msgid "Last Name"
+msgstr "Last Name"
+
+#. module: mh_centroamerica_campos
+#: field:res.partner,low_date:0
+msgid "Low Date"
+msgstr "Low Date"
+
+#. module: mh_centroamerica_campos
+#: field:res.partner,max_consignable_amount:0
+msgid "Max Consignable Amount"
+msgstr "Max Consignable Amount"
+
+#. module: mh_centroamerica_campos
+#: field:res.partner,modified_by:0
+msgid "Modified By"
+msgstr "Modified By"
+
+#. module: mh_centroamerica_campos
+#: field:res.partner,modified_on:0
+msgid "Modified On"
+msgstr "Modified On"
+
+#. module: mh_centroamerica_campos
+#: field:res.partner,mother_maiden_name:0
+msgid "MotherMaidenName"
+msgstr "MotherMaidenName"
+
+#. module: mh_centroamerica_campos
+#: field:res.partner,need_invoice:0
+msgid "Need Invoice"
+msgstr "Need Invoice"
+
+#. module: mh_centroamerica_campos
+#: field:sale.order,ref_nova_invoice:0
+msgid "Nova Invoice"
+msgstr "Factura"
+
+#. module: mh_centroamerica_campos
+#: field:sale.order,official_consecutive:0
+msgid "Official Consecutive"
+msgstr "Ticket"
+
+#. module: mh_centroamerica_campos
+#: field:sale.order.line,id_operation_detail:0
+msgid "Operation Detail"
+msgstr "Operation Detail"
+
+#. module: mh_centroamerica_campos
+#: model:ir.model,name:mh_centroamerica_campos.model_res_partner
+msgid "Partner"
+msgstr "Empresa"
+
+#. module: mh_centroamerica_campos
+#: field:res.partner,phone_office:0
+msgid "Phone Office"
+msgstr "Phone Office"
+
+#. module: mh_centroamerica_campos
+#: field:res.partner,point_amount:0
+msgid "Point Amount"
+msgstr "Point Amount"
+
+#. module: mh_centroamerica_campos
+#: field:res.partner,point_amount_date:0
+msgid "Point Amount Date"
+msgstr "Point Amount Date"
+
+#. module: mh_centroamerica_campos
+#: field:res.partner,point_amount_in_last_cut:0
+msgid "Point Amount in last Cut"
+msgstr "Point Amount in last Cut"
+
+#. module: mh_centroamerica_campos
+#: model:ir.model,name:mh_centroamerica_campos.model_sale_order
+msgid "Sales Order"
+msgstr "Pedido de venta"
+
+#. module: mh_centroamerica_campos
+#: model:ir.model,name:mh_centroamerica_campos.model_sale_order_line
+msgid "Sales Order Line"
+msgstr "Línea pedido de venta"
+
+#. module: mh_centroamerica_campos
+#: field:res.partner,sales_retention:0
+msgid "Sales Retention"
+msgstr "Sales Retention"
+
+#. module: mh_centroamerica_campos
+#: view:res.partner:mh_centroamerica_campos.view_res_partner_mh_form_inherit
+msgid "Shipping"
+msgstr "Shipping"
+
+#. module: mh_centroamerica_campos
+#: field:sale.order,shipping_address_sale:0
+msgid "Shipping Adress"
+msgstr "Dirección de Envío"
+
+#. module: mh_centroamerica_campos
+#: field:res.partner,id_sponsor:0
+msgid "Sponsor"
+msgstr "Sponsor"
+
+#. module: mh_centroamerica_campos
+#: field:res.partner,spouse_last_name:0
+msgid "Spouse LastName"
+msgstr "Spouse LastName"
+
+#. module: mh_centroamerica_campos
+#: field:res.partner,spouse_mother_maiden_name:0
+msgid "Spouse Mother Maiden Name"
+msgstr "Spouse Mother Maiden Name"
+
+#. module: mh_centroamerica_campos
+#: field:res.partner,spouse_name:0
+msgid "Spouse Name"
+msgstr "Spouse Name"
+
+#. module: mh_centroamerica_campos
+#: field:res.partner,string2:0
+msgid "String 2"
+msgstr "String 2"
+
+#. module: mh_centroamerica_campos
+#: field:res.partner,string1:0
+msgid "String1"
+msgstr "String1"
+
+#. module: mh_centroamerica_campos
+#: field:res.partner,sucursal:0
+msgid "Sucursal"
+msgstr "Sucursal"
+
+#. module: mh_centroamerica_campos
+#: field:res.partner,tax_register:0
+msgid "Tax Register"
+msgstr "Tax Register"
+
+#. module: mh_centroamerica_campos
+#: field:res.partner,tax_retention:0
+msgid "Tax Retention"
+msgstr "Tax Retention"
+
+#. module: mh_centroamerica_campos
+#: view:sale.order:mh_centroamerica_campos.inherit_view_search_mh_sales_filter
+#: view:sale.order:mh_centroamerica_campos.inherit_view_tree_mh_sales_filter
+msgid "Ticket"
+msgstr "Ticket"
+
+#. module: mh_centroamerica_campos
+#: field:sale.order,date_done_shipping:0
+msgid "date_done"
+msgstr "Fecha de Baja de Inventario"
