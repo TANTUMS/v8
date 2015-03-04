@@ -30,7 +30,7 @@
             <field name="arch" type="xml">
 
                <!-- add your filtre at the end -->
-                <xpath expr="filter[@string='Quotations']" position="after">
+                <xpath expr="field[@name='name']" position="before">
                     <field name="official_consecutive" string="Ticket"/>
                     <field name="id_dim" string="DIM"/>
                 </xpath>

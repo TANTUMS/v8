@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: Odoo Server 8.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-03-03 05:17+0000\n"
-"PO-Revision-Date: 2015-03-02 23:32-0600\n"
+"PO-Revision-Date: 2015-03-03 17:13-0600\n"
 "Last-Translator: Said Kuri <skuri@adtech.com.mx>\n"
 "Language-Team: Adtech\n"
 "MIME-Version: 1.0\n"
@@ -156,7 +156,7 @@ msgstr "Exterior Number"
 #. module: mh_centroamerica_campos
 #: field:sale.order,package_guide:0
 msgid "Guide"
-msgstr "Guía"
+msgstr "Guía de Paqueteria"
 
 #. module: mh_centroamerica_campos
 #: field:res.partner,has_address_proof:0
@@ -206,7 +206,7 @@ msgstr "Id Official ?"
 #. module: mh_centroamerica_campos
 #: field:sale.order,id_shop:0
 msgid "Id Shop"
-msgstr "Tienda"
+msgstr "Tienda de Captura"
 
 #. module: mh_centroamerica_campos
 #: field:res.partner,id_type:0
@@ -266,7 +266,7 @@ msgstr "Factura"
 #. module: mh_centroamerica_campos
 #: field:sale.order,official_consecutive:0
 msgid "Official Consecutive"
-msgstr "Ticket"
+msgstr "Ticket de Venta"
 
 #. module: mh_centroamerica_campos
 #: field:sale.order.line,id_operation_detail:0
@@ -372,7 +372,7 @@ msgstr "Tax Retention"
 #: view:sale.order:mh_centroamerica_campos.inherit_view_search_mh_sales_filter
 #: view:sale.order:mh_centroamerica_campos.inherit_view_tree_mh_sales_filter
 msgid "Ticket"
-msgstr "Ticket"
+msgstr "Ticket de  Venta"
 
 #. module: mh_centroamerica_campos
 #: field:sale.order,date_done_shipping:0
