@@ -1,0 +1,88 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* mh_zonas
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-03-04 21:19+0000\n"
+"PO-Revision-Date: 2015-03-04 15:21-0600\n"
+"Last-Translator: Said Kuri <skuri@adtech.com.mx>\n"
+"Language-Team: Adtech <skuri@adtech.com.mx>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+"Language: es_MX\n"
+
+#. module: mh_zonas
+#: field:mh.shop,code:0
+msgid "Code"
+msgstr "Código"
+
+#. module: mh_zonas
+#: model:ir.actions.act_window,name:mh_zonas.action_mh_zonas_view
+#: model:ir.ui.menu,name:mh_zonas.menu_mh_zonas
+msgid "Configuracion de Zonas"
+msgstr "Configuracion de Zonas"
+
+#. module: mh_zonas
+#: field:mh.shop,create_uid:0 field:mh.zonas,create_uid:0
+msgid "Created by"
+msgstr "Created by"
+
+#. module: mh_zonas
+#: field:mh.shop,create_date:0 field:mh.zonas,create_date:0
+msgid "Created on"
+msgstr "Created on"
+
+#. module: mh_zonas
+#: field:mh.shop,id:0 field:mh.zonas,id:0
+msgid "ID"
+msgstr "ID"
+
+#. module: mh_zonas
+#: field:mh.shop,write_uid:0 field:mh.zonas,write_uid:0
+msgid "Last Updated by"
+msgstr "Last Updated by"
+
+#. module: mh_zonas
+#: field:mh.shop,write_date:0 field:mh.zonas,write_date:0
+msgid "Last Updated on"
+msgstr "Last Updated on"
+
+#. module: mh_zonas
+#: view:mh.zonas:mh_zonas.mh_zone_tree
+msgid "MH Zonas"
+msgstr "MH Zonas"
+
+#. module: mh_zonas
+#: field:mh.zonas,shop_ids:0
+msgid "Shop ids"
+msgstr "Tiendas"
+
+#. module: mh_zonas
+#: view:mh.zonas:mh_zonas.mh_zonas_view_form
+msgid "Tiendas"
+msgstr "Tiendas"
+
+#. module: mh_zonas
+#: field:mh.shop,warehouse_type:0
+msgid "Warehouse Type"
+msgstr "Tipo de Tienda"
+
+#. module: mh_zonas
+#: field:mh.shop,warehouse_id:0
+msgid "Warehouse id"
+msgstr "Almacen o Tienda"
+
+#. module: mh_zonas
+#: field:mh.shop,zone_id:0
+msgid "Zone id"
+msgstr "Zona"
+
+#. module: mh_zonas
+#: field:mh.zonas,name:0
+msgid "name"
+msgstr "Nombre"

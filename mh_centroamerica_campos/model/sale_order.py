@@ -36,6 +36,8 @@ class sale_order(osv.osv):
       shipping = self.pool.get('res.partner').browse(cr,uid,so)
       shipping_address = 'NOMBRE: '+ str(shipping.mh_shipping_name) + '\n'  + 'CALLE: '+  str(shipping.mh_shipping_street) + '\n'  + 'NUM INT: '+  str(shipping.mh_shipping_numin) + '\n' + 'NUM EXT: '+  str(shipping.mh_shipping_ext)+ '\n'   + 'COLONIA: ' + str(shipping.mh_shipping_colony)
       shipping_address = shipping_address + '\n'  + 'CP: '+ str(shipping.mh_shipping_zip)+ '\n'  + 'CIUDAD: '+  str(shipping.mh_shipping_city)
+      shipping_address = shipping_address + '\n'  + 'ESTADO: ' + str(shipping.mh_shipping_state) + '\n'  + 'TEL: ' + str(shipping.mh_shipping_phone) + '\n'  + 'EMAIL: ' + str(shipping.mh_shipping_email)
+      shipping_address = shipping_address + '\n'  + 'CEL: ' + str(shipping.mh_shipping_celphone) + '\n'  + 'HORARIO: ' + str(shipping.mh_shipping_scheduler)
       res={}
       for r in ids:
           res[r] = shipping_address

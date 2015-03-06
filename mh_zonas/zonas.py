@@ -25,6 +25,15 @@ from openerp import models, fields
 
 class mh_zonas(models.Model):
     _name = 'mh.zonas'
-
     name = fields.Char(string='name')
-    
+    shop_ids = fields.One2many(comodel_name='mh.shop',inverse_name='zone_id')
+
+
+class mh_shop(models.Model):
+	_name = 'mh.shop'
+
+	zone_id = fields.Many2one(comodel_name='mh.zonas')
+	warehouse_type=fields.Char(string='Warehouse Type')
+	warehouse_id = fields.Many2one(comodel_name='stock.warehouse')
+	code =fields.Char(string='Code')
+

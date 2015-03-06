@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data>
+		<record model="ir.ui.view" id="mh_zone_tree">
+	        <field name="name">MH Zonas Tree view</field>
+	        <field name="model">mh.zonas</field>
+	        <field name="arch" type="xml">
+			<tree string="MH Zonas">	       
+	        	<field name="name"/>
+	        </tree>
+	        </field>
+        </record>
+		<record id="mh_zonas_view_form" model="ir.ui.view">
+			<field name="name">mh.zonas.view.form</field>
+			<field name="model">mh.zonas</field>
+			<field name="arch" type="xml">
+				<form version="8.0">
+					<field name="name"/>
+					<notebook>
+						<page string="Tiendas">
+							<field name="shop_ids">
+								<tree>
+									<field name="warehouse_type"/>
+									<field name="warehouse_id"/>
+									<field name="code"/>
+								</tree>
+							</field>
+						</page>
+					</notebook>
+				</form>
+			</field>
+		</record>
+
+		<record id="action_mh_zonas_view" model="ir.actions.act_window">
+            <field name="name">Configuracion de Zonas</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">mh.zonas</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="mh_zone_tree"/>
+        </record>
+
+        <menuitem action="action_mh_zonas_view"  id="menu_mh_zonas" parent="stock.menu_stock_configuration" sequence="1"/>
+	</data>
+</openerp>
