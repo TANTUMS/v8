@@ -36,7 +36,7 @@ Campos que contiene Megaweb necesarios para una correcta sincronizacion
     'images' : [],
     'depends' : ['base','sale','delivery'],
     'demo' : [],
-    'data' : ['view/sale_order_view.xml','view/res_partner_view.xml'],
+    'data' : ['view/sale_order_view.xml','view/res_partner_view.xml','view/res_users_view.xml'],
     #,'view/sale_order_search_view.xml'
     'test' : [],
     'auto_install': False,  

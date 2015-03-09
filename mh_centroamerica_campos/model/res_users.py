@@ -1,4 +1,4 @@
-    # -*- coding: utf-8 -*-
+	    # -*- coding: utf-8 -*-
 ##############################################################################
 #
 #    OpenERP, Open Source Management Solution
@@ -21,6 +21,8 @@
 # Coded by: Said Kuri Nunez (skuri@tantums.com)
 ##############################################################################
 
-import res_partner
-import sale_order
-import res_users
+from openerp import models, fields
+
+class res_users(models.Model):
+    _inherit ='res.users'
+    warehouse_uid_id = fields.Many2one(comodel_name='stock.warehouse', string='Almacen')
