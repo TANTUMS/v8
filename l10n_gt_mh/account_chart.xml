@@ -1,0 +1,2094 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data noupdate="1">
+
+        <!-- Plantilla -->
+
+        <record id="plan_raiz" model="account.account.template">
+            <field name="code">-</field>
+            <field name="name">Plan contable de Guatemala (MH)</field>
+            <field name="type">view</field>
+            <field name="user_type" ref="cuenta_vista"/>
+        </record>
+
+        <!-- Cuentas de Balance General -->
+
+        <record id="bal" model="account.account.template">
+            <field name="code">A</field>
+            <field name="name">Balance General</field>
+            <field ref="plan_raiz" name="parent_id"/>
+            <field name="type">view</field>
+            <field name="user_type" ref="cuenta_vista"/>
+        </record>
+
+        <record id="cta1" model="account.account.template">
+            <field name="code">1</field>
+            <field name="name">Activo</field>
+            <field ref="bal" name="parent_id"/>
+            <field name="type">view</field>
+            <field name="user_type" ref="cuenta_vista"/>
+        </record>
+
+        <record id="cta11" model="account.account.template">
+            <field name="code">11</field>
+            <field name="name">Activo Corriente</field>
+            <field ref="cta1" name="parent_id"/>
+            <field name="type">view</field>
+            <field name="user_type" ref="cuenta_vista"/>
+        </record>
+
+        <record id="cta111" model="account.account.template">
+            <field name="code">111</field>
+            <field name="name">Efectivo y Equivalentes</field>
+            <field ref="cta11" name="parent_id"/>
+            <field name="type">view</field>
+            <field name="user_type" ref="cuenta_vista"/>
+        </record>
+
+        <record id="cta11101" model="account.account.template">
+            <field name="code">11101</field>
+            <field name="name">Caja</field>
+            <field ref="cta111" name="parent_id"/>
+            <field name="type">view</field>
+            <field name="user_type" ref="cuenta_vista"/>
+        </record>
+
+        <record id="cta1110103" model="account.account.template">
+            <field name="code">1110103</field>
+            <field name="name">Caja Chica Quetzaltenango</field>
+            <field ref="cta11101" name="parent_id"/>
+            <field name="type">liquidity</field>
+            <field name="user_type" ref="cuenta_efectivo"/>
+        </record>
+
+        <record id="cta1110104" model="account.account.template">
+            <field name="code">1110104</field>
+            <field name="name">Fondo de Cambios Quetzaltenango</field>
+            <field ref="cta11101" name="parent_id"/>
+            <field name="type">liquidity</field>
+            <field name="user_type" ref="cuenta_efectivo"/>
+        </record>
+
+        <record id="cta1110105" model="account.account.template">
+            <field name="code">1110105</field>
+            <field name="name">Caja Chica de Huehuetenango</field>
+            <field ref="cta11101" name="parent_id"/>
+            <field name="type">liquidity</field>
+            <field name="user_type" ref="cuenta_efectivo"/>
+        </record>
+
+        <record id="cta1110106" model="account.account.template">
+            <field name="code">1110106</field>
+            <field name="name">Fondo de Cambios Huehuetenango</field>
+            <field ref="cta11101" name="parent_id"/>
+            <field name="type">liquidity</field>
+            <field name="user_type" ref="cuenta_efectivo"/>
+        </record>
+
+        <record id="cta1110110" model="account.account.template">
+            <field name="code">1110110</field>
+            <field name="name">Caja Chica de Guatemala</field>
+            <field ref="cta11101" name="parent_id"/>
+            <field name="type">liquidity</field>
+            <field name="user_type" ref="cuenta_efectivo"/>
+        </record>
+
+        <record id="cta11102" model="account.account.template">
+            <field name="code">11102</field>
+            <field name="name">Bancos</field>
+            <field ref="cta111" name="parent_id"/>
+            <field name="type">view</field>
+            <field name="user_type" ref="cuenta_vista"/>
+        </record>
+
+        <record id="cta1110203" model="account.account.template">
+            <field name="code">1110203</field>
+            <field name="name">Banco Industrial(210-008658-7)</field>
+            <field ref="cta11102" name="parent_id"/>
+            <field name="type">liquidity</field>
+            <field name="user_type" ref="cuenta_efectivo"/>
+        </record>
+
+        <record id="cta1110204" model="account.account.template">
+            <field name="code">1110204</field>
+            <field name="name">BancoR (14-12-0167-6)</field>
+            <field ref="cta11102" name="parent_id"/>
+            <field name="type">liquidity</field>
+            <field name="user_type" ref="cuenta_efectivo"/>
+        </record>
+
+        <record id="cta1110205" model="account.account.template">
+            <field name="code">1110205</field>
+            <field name="name">Bantrab(101-039341-3)</field>
+            <field ref="cta11102" name="parent_id"/>
+            <field name="type">liquidity</field>
+            <field name="user_type" ref="cuenta_efectivo"/>
+        </record>
+
+        <record id="cta1110207" model="account.account.template">
+            <field name="code">1110207</field>
+            <field name="name">Banrural(3-033-33247-8)</field>
+            <field ref="cta11102" name="parent_id"/>
+            <field name="type">liquidity</field>
+            <field name="user_type" ref="cuenta_efectivo"/>
+        </record>
+
+        <record id="cta1110209" model="account.account.template">
+            <field name="code">1110209</field>
+            <field name="name">Bantrab Dolares $ (90-036293-0)</field>
+            <field ref="cta11102" name="parent_id"/>
+            <field name="type">liquidity</field>
+            <field name="user_type" ref="cuenta_efectivo"/>
+        </record>
+
+        <record id="cta1110212" model="account.account.template">
+            <field name="code">1110212</field>
+            <field name="name">G  T Continental</field>
+            <field ref="cta11102" name="parent_id"/>
+            <field name="type">liquidity</field>
+            <field name="user_type" ref="cuenta_efectivo"/>
+        </record>
+
+        <record id="cta1110213" model="account.account.template">
+            <field name="code">1110213</field>
+            <field name="name">BancoR $ (4-14-10074-35)</field>
+            <field ref="cta11102" name="parent_id"/>
+            <field name="type">liquidity</field>
+            <field name="user_type" ref="cuenta_efectivo"/>
+        </record>
+
+        <record id="cta1110214" model="account.account.template">
+            <field name="code">1110214</field>
+            <field name="name">Agromercantil</field>
+            <field ref="cta11102" name="parent_id"/>
+            <field name="type">liquidity</field>
+            <field name="user_type" ref="cuenta_efectivo"/>
+        </record>
+
+        <record id="cta1110215" model="account.account.template">
+            <field name="code">1110215</field>
+            <field name="name">Depositos en transito</field>
+            <field ref="cta11102" name="parent_id"/>
+            <field name="type">liquidity</field>
+            <field name="user_type" ref="cuenta_efectivo"/>
+        </record>
+
+        <record id="cta1110220" model="account.account.template">
+            <field name="code">1110220</field>
+            <field name="name">Cheques Rechazados</field>
+            <field ref="cta11102" name="parent_id"/>
+            <field name="type">liquidity</field>
+            <field name="user_type" ref="cuenta_efectivo"/>
+        </record>
+
+        <record id="cta112" model="account.account.template">
+            <field name="code">112</field>
+            <field name="name">Cuentas por Cobrar</field>
+            <field ref="cta11" name="parent_id"/>
+            <field name="type">view</field>
+            <field name="user_type" ref="cuenta_vista"/>
+        </record>
+
+        <record id="cta11201" model="account.account.template">
+            <field name="code">11201</field>
+            <field name="name">Clientes</field>
+            <field ref="cta112" name="parent_id"/>
+            <field name="type">view</field>
+            <field name="user_type" ref="cuenta_vista"/>
+        </record>
+
+        <record id="cta11203" model="account.account.template">
+            <field name="code">11203</field>
+            <field name="name">Deudores</field>
+            <field ref="cta112" name="parent_id"/>
+            <field name="type">view</field>
+            <field name="user_type" ref="cuenta_vista"/>
+        </record>
+
+        <record id="cta1120301" model="account.account.template">
+            <field name="code">1120301</field>
+            <field name="name">Acti-pure S.A. de C.V.</field>
+            <field ref="cta11203" name="parent_id"/>
+            <field name="type">receivable</field>
+            <field name="user_type" ref="cuenta_cxc"/>
+        </record>
+
+        <record id="cta1120302" model="account.account.template">
+            <field name="code">1120302</field>
+            <field name="name">Mega Health de El Salvador S.A.</field>
+            <field ref="cta11203" name="parent_id"/>
+            <field name="type">receivable</field>
+            <field name="user_type" ref="cuenta_cxc"/>
+        </record>
+
+        <record id="cta1120303" model="account.account.template">
+            <field name="code">1120303</field>
+            <field name="name">Pronaf Guatemala</field>
+            <field ref="cta11203" name="parent_id"/>
+            <field name="type">receivable</field>
+            <field name="user_type" ref="cuenta_cxc"/>
+        </record>
+
+         <record id="cta1120304" model="account.account.template">
+            <field name="code">1120304</field>
+            <field name="name">Health Honduras</field>
+            <field ref="cta11203" name="parent_id"/>
+            <field name="type">receivable</field>
+            <field name="user_type" ref="cuenta_cxc"/>
+        </record>
+
+        <record id="cta1120305" model="account.account.template">
+            <field name="code">1120305</field>
+            <field name="name">Health Nicaragua</field>
+            <field ref="cta11203" name="parent_id"/>
+            <field name="type">receivable</field>
+            <field name="user_type" ref="cuenta_cxc"/>
+        </record>
+
+        <record id="cta1120306" model="account.account.template">
+            <field name="code">1120306</field>
+            <field name="name">Health Colombia</field>
+            <field ref="cta11203" name="parent_id"/>
+            <field name="type">receivable</field>
+            <!-- <field name="reconcile" eval="True"/> -->
+            <field name="user_type" ref="cuenta_cxc"/>
+        </record>
+
+        <record id="cta1120307" model="account.account.template">
+            <field name="code">1120307</field>
+            <field name="name">Health Costa Rica</field>
+            <field ref="cta11203" name="parent_id"/>
+            <field name="type">receivable</field>
+            <field name="user_type" ref="cuenta_cxc"/>
+        </record>
+
+        <record id="cta11205" model="account.account.template">
+            <field name="code">11205</field>
+            <field name="name">Anticipos</field>
+            <field ref="cta112" name="parent_id"/>
+            <field name="type">view</field>
+            <field name="user_type" ref="cuenta_vista"/>
+        </record>
+
+         <record id="cta1120504" model="account.account.template">
+            <field name="code">1120504</field>
+            <field name="name">Anticipos por Liquidar</field>
+            <field ref="cta11205" name="parent_id"/>
+            <field name="type">receivable</field>
+            <field name="user_type" ref="cuenta_cxc"/>
+        </record>
+
+         <record id="cta11206" model="account.account.template">
+            <field name="code">11206</field>
+            <field name="name">IVA por Cobrar</field>
+            <field ref="cta112" name="parent_id"/>
+            <field name="type">view</field>
+            <field name="user_type" ref="cuenta_vista"/>
+        </record>
+
+        <record id="cta1120601" model="account.account.template">
+            <field name="code">1120601</field>
+            <field name="name">Creditos del Mes</field>
+            <field ref="cta11206" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_activo"/>
+        </record>
+
+        <record id="cta1120602" model="account.account.template">
+            <field name="code">1120602</field>
+            <field name="name">Credito Acumulado</field>
+            <field ref="cta11206" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_activo"/>
+        </record>
+
+        <record id="cta1120603" model="account.account.template">
+            <field name="code">1120603</field>
+            <field name="name">IVA Retenido</field>
+            <field ref="cta11206" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_activo"/>
+        </record>
+
+        <record id="cta1120604" model="account.account.template">
+            <field name="code">1120604</field>
+            <field name="name">Credito iva Retenido</field>
+            <field ref="cta11206" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_activo"/>
+        </record>
+
+        <record id="cta11207" model="account.account.template">
+            <field name="code">11207</field>
+            <field name="name">ANTICIPOS I.S.R</field>
+            <field ref="cta112" name="parent_id"/>
+            <field name="type">view</field>
+            <field name="user_type" ref="cuenta_vista"/>
+        </record>
+
+         <record id="cta1120701" model="account.account.template">
+            <field name="code">1120701</field>
+            <field name="name">Pagos Trimestrales ISR</field>
+            <field ref="cta11207" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_activo"/>
+        </record>
+
+        <record id="cta1120703" model="account.account.template">
+            <field name="code">1120703</field>
+            <field name="name">Credito Acumulado ISR</field>
+            <field ref="cta11207" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_activo"/>
+        </record>
+
+        <record id="cta1120706" model="account.account.template">
+            <field name="code">1120706</field>
+            <field name="name">ISO Trimestrales</field>
+            <field ref="cta11207" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_activo"/>
+        </record>
+
+        <record id="cta114" model="account.account.template">
+            <field name="code">114</field>
+            <field name="name">Inventarios</field>
+            <field ref="cta11" name="parent_id"/>
+            <field name="type">view</field>
+            <field name="user_type" ref="cuenta_vista"/>
+        </record>
+
+        <record id="cta11401" model="account.account.template">
+            <field name="code">11401</field>
+            <field name="name">Guatemala</field>
+            <field ref="cta114" name="parent_id"/>
+            <field name="type">view</field>
+            <field name="user_type" ref="cuenta_vista"/>
+        </record>
+
+        <record id="cta1140101" model="account.account.template">
+            <field name="code">1140101</field>
+            <field name="name">Inventario de Productos</field>
+            <field ref="cta114" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_activo"/>
+        </record>
+
+        <record id="cta1140102" model="account.account.template">
+            <field name="code">1140102</field>
+            <field name="name">Inventario de Accesorios</field>
+            <field ref="cta114" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_activo"/>
+        </record>
+
+        <record id="cta11402" model="account.account.template">
+            <field name="code">11402</field>
+            <field name="name">Quetzaltenango</field>
+            <field ref="cta114" name="parent_id"/>
+            <field name="type">view</field>
+            <field name="user_type" ref="cuenta_vista"/>
+        </record>
+
+        <record id="cta1140201" model="account.account.template">
+            <field name="code">1140201</field>
+            <field name="name">Inventario de Productos</field>
+            <field ref="cta114" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_activo"/>
+        </record>
+
+        <record id="cta1140202" model="account.account.template">
+            <field name="code">1140202</field>
+            <field name="name">Inventario de Accesorios</field>
+            <field ref="cta114" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_activo"/>
+        </record>
+
+        <record id="cta11403" model="account.account.template">
+            <field name="code">11403</field>
+            <field name="name">Huehuetenango</field>
+            <field ref="cta114" name="parent_id"/>
+            <field name="type">view</field>
+            <field name="user_type" ref="cuenta_vista"/>
+        </record>
+
+        <record id="cta1140301" model="account.account.template">
+            <field name="code">1140301</field>
+            <field name="name">Inventario de Productos</field>
+            <field ref="cta114" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_activo"/>
+        </record>
+
+        <record id="cta1140302" model="account.account.template">
+            <field name="code">1140302</field>
+            <field name="name">Inventario de Accesorios</field>
+            <field ref="cta114" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_activo"/>
+        </record>
+
+        <record id="cta11405" model="account.account.template">
+            <field name="code">11405</field>
+            <field name="name">Mazatenango</field>
+            <field ref="cta114" name="parent_id"/>
+            <field name="type">view</field>
+            <field name="user_type" ref="cuenta_vista"/>
+        </record>
+
+        <record id="cta1140501" model="account.account.template">
+            <field name="code">1140501</field>
+            <field name="name">Productos</field>
+            <field ref="cta11405" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_activo"/>
+        </record>
+
+        <record id="cta12" model="account.account.template">
+            <field name="code">12</field>
+            <field name="name">No Corriente</field>
+            <field ref="cta1" name="parent_id"/>
+            <field name="type">view</field>
+            <field name="user_type" ref="cuenta_vista"/>
+        </record>
+
+        <record id="cta121" model="account.account.template">
+            <field name="code">121</field>
+            <field name="name">Propiedad, Planta y Equipo</field>
+            <field ref="cta12" name="parent_id"/>
+            <field name="type">view</field>
+            <field name="user_type" ref="cuenta_vista"/>
+        </record>
+
+        <record id="cta12101" model="account.account.template">
+            <field name="code">12101</field>
+            <field name="name">Mobiliario y Equipo</field>
+            <field ref="cta121" name="parent_id"/>
+            <field name="type">view</field>
+            <field name="user_type" ref="cuenta_vista"/>
+        </record>
+
+        <record id="cta1210101" model="account.account.template">
+            <field name="code">1210101</field>
+            <field name="name">Costo Mobiliario y Equipo</field>
+            <field ref="cta12101" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_activo"/>
+        </record>
+
+        <record id="cta1210102" model="account.account.template">
+            <field name="code">1210102</field>
+            <field name="name">Deprec. Acum. Mob. y Equipo</field>
+            <field ref="cta12101" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_activo"/>
+        </record>
+
+        <record id="cta1210201" model="account.account.template">
+            <field name="code">1210201</field>
+            <field name="name">Costo Vehículos</field>
+            <field ref="cta12101" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_activo"/>
+        </record>
+
+        <record id="cta1210202" model="account.account.template">
+            <field name="code">1210202</field>
+            <field name="name">Deprec. Acum. Vehículos</field>
+            <field ref="cta12101" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_activo"/>
+        </record>
+
+        <record id="cta12103" model="account.account.template">
+            <field name="code">12103</field>
+            <field name="name">Equipo de Computacion</field>
+            <field ref="cta121" name="parent_id"/>
+            <field name="type">view</field>
+            <field name="user_type" ref="cuenta_vista"/>
+        </record>
+
+        <record id="cta1210301" model="account.account.template">
+            <field name="code">1210301</field>
+            <field name="name">Costo de Equipo de Computo</field>
+            <field ref="cta12103" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_activo"/>
+        </record>
+
+        <record id="cta1210302" model="account.account.template">
+            <field name="code">1210302</field>
+            <field name="name">Deprec. acum. equipo computo</field>
+            <field ref="cta12103" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_activo"/>
+        </record>
+
+        <record id="cta12104" model="account.account.template">
+            <field name="code">12104</field>
+            <field name="name">Registros Sanitarios</field>
+            <field ref="cta121" name="parent_id"/>
+            <field name="type">view</field>
+            <field name="user_type" ref="cuenta_vista"/>
+        </record>
+
+        <record id="cta1210401" model="account.account.template">
+            <field name="code">1210401</field>
+            <field name="name">Costo Registros Sanitarios</field>
+            <field ref="cta12104" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_activo"/>
+        </record>
+
+        <record id="cta1210402" model="account.account.template">
+            <field name="code">1210402</field>
+            <field name="name">Amortiz. Acum. Registros</field>
+            <field ref="cta12104" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_activo"/>
+        </record>
+
+        <record id="cta12107" model="account.account.template">
+            <field name="code">12107</field>
+            <field name="name">Marcas y Patentes</field>
+            <field ref="cta121" name="parent_id"/>
+            <field name="type">view</field>
+            <field name="user_type" ref="cuenta_vista"/>
+        </record>
+
+        <record id="cta1210701" model="account.account.template">
+            <field name="code">1210701</field>
+            <field name="name">Costo Marcas y Patentes</field>
+            <field ref="cta12107" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_activo"/>
+        </record>
+
+        <record id="cta1210702" model="account.account.template">
+            <field name="code">1210702</field>
+            <field name="name">Amortiz. Acum. Marcas y Patentes</field>
+            <field ref="cta12107" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_activo"/>
+        </record>
+
+        <record id="cta12109" model="account.account.template">
+            <field name="code">12109</field>
+            <field name="name">Mejoras Propiedades Arrend.</field>
+            <field ref="cta121" name="parent_id"/>
+            <field name="type">view</field>
+            <field name="user_type" ref="cuenta_vista"/>
+        </record>
+
+        <record id="cta1210901" model="account.account.template">
+            <field name="code">1210901</field>
+            <field name="name">Costo Mejoras Propiedades</field>
+            <field ref="cta12109" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_activo"/>
+        </record>
+
+        <record id="cta1210902" model="account.account.template">
+            <field name="code">1210902</field>
+            <field name="name">Deprec. Acum. Mejoras</field>
+            <field ref="cta12109" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_activo"/>
+        </record>
+
+        <record id="cta122" model="account.account.template">
+            <field name="code">122</field>
+            <field name="name">Otros Activos</field>
+            <field ref="cta12" name="parent_id"/>
+            <field name="type">view</field>
+            <field name="user_type" ref="cuenta_vista"/>
+        </record>
+
+        <record id="cta12201" model="account.account.template">
+            <field name="code">12201</field>
+            <field name="name">Gastos de Organización</field>
+            <field ref="cta122" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_activo"/>
+        </record>
+
+        <record id="cta12202" model="account.account.template">
+            <field name="code">12202</field>
+            <field name="name">Amort. Gtos. Organización</field>
+            <field ref="cta122" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_activo"/>
+        </record>
+
+        <record id="cta12203" model="account.account.template">
+            <field name="code">12203</field>
+            <field name="name">Inv. Producto Vencido</field>
+            <field ref="cta122" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_activo"/>
+        </record>
+
+        <record id="cta12204" model="account.account.template">
+            <field name="code">12204</field>
+            <field name="name">Amort. Acum. Inv. Producto</field>
+            <field ref="cta122" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_activo"/>
+        </record>
+
+        <record id="cta12205" model="account.account.template">
+            <field name="code">12205</field>
+            <field name="name">Inv. Accesorio Obsoleto</field>
+            <field ref="cta122" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_activo"/>
+        </record>
+
+        <record id="cta12206" model="account.account.template">
+            <field name="code">12206</field>
+            <field name="name">Amort. Acum. Inv. Accesorio</field>
+            <field ref="cta122" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_activo"/>
+        </record>
+
+        <record id="cta12208" model="account.account.template">
+            <field name="code">12208</field>
+            <field name="name">Depositos en Garantia</field>
+            <field ref="cta122" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_activo"/>
+        </record>
+
+        <record id="cta12210" model="account.account.template">
+            <field name="code">12210</field>
+            <field name="name">Perdida en Inventario</field>
+            <field ref="cta122" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_activo"/>
+        </record>
+
+        <record id="cta12211" model="account.account.template">
+            <field name="code">12211</field>
+            <field name="name">Desechos / Cortesias</field>
+            <field ref="cta122" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_activo"/>
+        </record>
+
+
+        <record id="cta2" model="account.account.template">
+            <field name="code">2</field>
+            <field name="name">Pasivo</field>
+            <field ref="bal" name="parent_id"/>
+            <field name="type">view</field>
+            <field name="user_type" ref="cuenta_vista"/>
+        </record>
+
+        <record id="cta21" model="account.account.template">
+            <field name="code">21</field>
+            <field name="name">Corriente</field>
+            <field ref="cta2" name="parent_id"/>
+            <field name="type">view</field>
+            <field name="user_type" ref="cuenta_vista"/>
+        </record>
+
+        <record id="cta212" model="account.account.template">
+            <field name="code">212</field>
+            <field name="name">Cuentas por Pagar</field>
+            <field ref="cta21" name="parent_id"/>
+            <field name="type">view</field>
+            <field name="user_type" ref="cuenta_vista"/>
+        </record>
+
+        <record id="cta21201" model="account.account.template">
+            <field name="code">21201</field>
+            <field name="name">Cuentas por Pagar</field>
+            <field ref="cta212" name="parent_id"/>
+            <field name="type">payable</field>
+            <field name="reconcile" eval="True"/>
+            <field name="user_type" ref="cuenta_cxp"/>
+        </record>
+
+        <record id="cta21203" model="account.account.template">
+            <field name="code">21203</field>
+            <field name="name">Couta Patronal IGSS</field>
+            <field ref="cta212" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_pasivo"/>
+        </record>
+
+        <record id="cta21204" model="account.account.template">
+            <field name="code">21204</field>
+            <field name="name">Anticipo S/ Ventas</field>
+            <field ref="cta212" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_pasivo"/>
+        </record>
+
+        <record id="cta21205" model="account.account.template">
+            <field name="code">21205</field>
+            <field name="name">Cuenta por Pagar Nomina</field>
+            <field ref="cta212" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_pasivo"/>
+        </record>
+
+        <record id="cta21209" model="account.account.template">
+            <field name="code">21209</field>
+            <field name="name">Provision Eventos</field>
+            <field ref="cta212" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_pasivo"/>
+        </record>
+
+        <record id="cta213" model="account.account.template">
+            <field name="code">213</field>
+            <field name="name">Retenciones Legales</field>
+            <field ref="cta21" name="parent_id"/>
+            <field name="type">view</field>
+            <field name="user_type" ref="cuenta_vista"/>
+        </record>
+
+        <record id="cta21301" model="account.account.template">
+            <field name="code">21301</field>
+            <field name="name">IVA por Pagar</field>
+            <field ref="cta213" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_pasivo"/>
+        </record>
+
+        <record id="cta21302" model="account.account.template">
+            <field name="code">21302</field>
+            <field name="name">IGSS Couta Laboral</field>
+            <field ref="cta213" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_pasivo"/>
+        </record>
+
+        <record id="cta21303" model="account.account.template">
+            <field name="code">21303</field>
+            <field name="name">Retenciones ISR</field>
+            <field ref="cta213" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_pasivo"/>
+        </record>
+
+        <record id="cta21306" model="account.account.template">
+            <field name="code">21306</field>
+            <field name="name">Retenciones ISR de Trabajo</field>
+            <field ref="cta213" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_pasivo"/>
+        </record>
+
+         <record id="cta214" model="account.account.template">
+            <field name="code">214</field>
+            <field name="name">Provision I.S.R</field>
+            <field ref="cta21" name="parent_id"/>
+            <field name="type">view</field>
+            <field name="user_type" ref="cuenta_vista"/>
+        </record>
+
+        <record id="cta21401" model="account.account.template">
+            <field name="code">21401</field>
+            <field name="name">Provision ISR</field>
+            <field ref="cta214" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_pasivo"/>
+        </record>
+
+        <record id="cta215" model="account.account.template">
+            <field name="code">215</field>
+            <field name="name">Reservas Laborales</field>
+            <field ref="cta21" name="parent_id"/>
+            <field name="type">view</field>
+            <field name="user_type" ref="cuenta_vista"/>
+        </record>
+
+        <record id="cta21501" model="account.account.template">
+            <field name="code">21501</field>
+            <field name="name">Reservas Aguinaldo</field>
+            <field ref="cta215" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_pasivo"/>
+        </record>
+
+        <record id="cta21502" model="account.account.template">
+            <field name="code">21502</field>
+            <field name="name">Reservas Bono 14</field>
+            <field ref="cta215" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_pasivo"/>
+        </record>
+
+        <record id="cta22" model="account.account.template">
+            <field name="code">22</field>
+            <field name="name">No Corriente</field>
+            <field ref="cta2" name="parent_id"/>
+            <field name="type">view</field>
+            <field name="user_type" ref="cuenta_vista"/>
+        </record>
+
+        <record id="cta221" model="account.account.template">
+            <field name="code">221</field>
+            <field name="name">Proveedores</field>
+            <field ref="cta22" name="parent_id"/>
+            <field name="type">view</field>
+            <field name="user_type" ref="cuenta_vista"/>
+        </record>
+
+        <record id="cta22102" model="account.account.template">
+            <field name="code">22102</field>
+            <field name="name">Dif. Cambiario Proveedores</field>
+            <field ref="cta221" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_pasivo"/>
+        </record>
+
+        <record id="cta22104" model="account.account.template">
+            <field name="code">22104</field>
+            <field name="name">Health Diamante S.A de C.V.</field>
+            <field ref="cta221" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_pasivo"/>
+        </record>
+
+        <record id="cta222" model="account.account.template">
+            <field name="code">222</field>
+            <field name="name">Reserva para Indemnizaciones</field>
+            <field ref="cta22" name="parent_id"/>
+            <field name="type">view</field>
+            <field name="user_type" ref="cuenta_vista"/>
+        </record>
+
+        <record id="cta22201" model="account.account.template">
+            <field name="code">22201</field>
+            <field name="name">Reserva para Indemnizaciones</field>
+            <field ref="cta222" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_pasivo"/>
+        </record>
+
+
+        
+        <record id="cta3" model="account.account.template">
+            <field name="code">3</field>
+            <field name="name">Capital</field>
+            <field ref="bal" name="parent_id"/>
+            <field name="type">view</field>
+            <field name="user_type" ref="cuenta_vista"/>
+        </record>
+
+        <record id="cta31" model="account.account.template">
+            <field name="code">31</field>
+            <field name="name">Capital y Reservas</field>
+            <field ref="cta3" name="parent_id"/>
+            <field name="type">view</field>
+            <field name="user_type" ref="cuenta_vista"/>
+        </record>
+
+        <record id="cta311" model="account.account.template">
+            <field name="code">311</field>
+            <field name="name">Capital y Reservas</field>
+            <field ref="cta31" name="parent_id"/>
+            <field name="type">view</field>
+            <field name="user_type" ref="cuenta_vista"/>
+        </record>
+
+        <record id="cta31101" model="account.account.template">
+            <field name="code">31101</field>
+            <field name="name">Capital Autorizado</field>
+            <field ref="cta311" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_capital"/>
+        </record>
+
+        <record id="cta31102" model="account.account.template">
+            <field name="code">31102</field>
+            <field name="name">Acciones a Suscrbir</field>
+            <field ref="cta311" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_capital"/>
+        </record>
+
+        <record id="cta31103" model="account.account.template">
+            <field name="code">31103</field>
+            <field name="name">Reserva Legal</field>
+            <field ref="cta311" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_capital"/>
+        </record>
+
+        <record id="cta32" model="account.account.template">
+            <field name="code">32</field>
+            <field name="name">Resultado</field>
+            <field ref="cta3" name="parent_id"/>
+            <field name="type">view</field>
+            <field name="user_type" ref="cuenta_vista"/>
+        </record>
+
+        <record id="cta321" model="account.account.template">
+            <field name="code">321</field>
+            <field name="name">UTILIDAD ACUMULADA</field>
+            <field ref="cta32" name="parent_id"/>
+            <field name="type">view</field>
+            <field name="user_type" ref="cuenta_vista"/>
+        </record>
+
+        <record id="cta32105" model="account.account.template">
+            <field name="code">32105</field>
+            <field name="name">Utilidades Acumuladas</field>
+            <field ref="cta321" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_capital"/>
+        </record>
+
+        <record id="cta33" model="account.account.template">
+            <field name="code">33</field>
+            <field name="name">Resultados</field>
+            <field ref="cta3" name="parent_id"/>
+            <field name="type">view</field>
+            <field name="user_type" ref="cuenta_vista"/>
+        </record>
+
+         <record id="cta331" model="account.account.template">
+            <field name="code">331</field>
+            <field name="name">PERDIDAS Y GANANCIAS</field>
+            <field ref="cta33" name="parent_id"/>
+            <field name="type">view</field>
+            <field name="user_type" ref="cuenta_vista"/>
+        </record>
+
+        <record id="cta33101" model="account.account.template">
+            <field name="code">33101</field>
+            <field name="name">Ganancia(Pérdida) del Periodo</field>
+            <field ref="cta331" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_capital"/>
+        </record>
+
+        <!-- Cuentas de Estado de Resultados -->
+
+        <record id="er" model="account.account.template">
+            <field name="code">B</field>
+            <field name="name">Estado de Resultados</field>
+            <field ref="plan_raiz" name="parent_id"/>
+            <field name="type">view</field>
+            <field name="user_type" ref="cuenta_vista"/>
+        </record>
+
+        <record id="cta4" model="account.account.template">
+            <field name="code">4</field>
+            <field name="name">Ingresos</field>
+            <field ref="er" name="parent_id"/>
+            <field name="type">view</field>
+            <field name="user_type" ref="cuenta_vista"/>
+        </record>
+
+        <record id="cta41" model="account.account.template">
+            <field name="code">41</field>
+            <field name="name">Ventas Netas</field>
+            <field ref="cta4" name="parent_id"/>
+            <field name="type">view</field>
+            <field name="user_type" ref="cuenta_vista"/>
+        </record>
+
+        <record id="cta411" model="account.account.template">
+            <field name="code">411</field>
+            <field name="name">Ventas Corrientes</field>
+            <field ref="cta41" name="parent_id"/>
+            <field name="type">view</field>
+            <field name="user_type" ref="cuenta_vista"/>
+        </record>
+
+        <record id="cta41101" model="account.account.template">
+            <field name="code">41101</field>
+            <field name="name">Ventas Guatemala</field>
+            <field ref="cta411" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_ingresos"/>
+        </record>
+
+        <record id="cta4110101" model="account.account.template">
+            <field name="code">4110101</field>
+            <field name="name">Productos</field>
+            <field ref="cta41101" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_ingresos"/>
+        </record>
+
+        <record id="cta4110103" model="account.account.template">
+            <field name="code">4110103</field>
+            <field name="name">Accesorios</field>
+            <field ref="cta41101" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_ingresos"/>
+        </record>
+
+        <record id="cta41102" model="account.account.template">
+            <field name="code">41102</field>
+            <field name="name">Ventas Quetzaltenango</field>
+            <field ref="cta411" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_ingresos"/>
+        </record>
+
+        <record id="cta4110201" model="account.account.template">
+            <field name="code">4110201</field>
+            <field name="name">Productos</field>
+            <field ref="cta41102" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_ingresos"/>
+        </record>
+
+        <record id="cta4110203" model="account.account.template">
+            <field name="code">4110203</field>
+            <field name="name">Accesorios</field>
+            <field ref="cta41102" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_ingresos"/>
+        </record>
+
+        <record id="cta41103" model="account.account.template">
+            <field name="code">41103</field>
+            <field name="name">Ventas Huehuetenango</field>
+            <field ref="cta411" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_ingresos"/>
+        </record>
+
+        <record id="cta4110301" model="account.account.template">
+            <field name="code">4110301</field>
+            <field name="name">Productos</field>
+            <field ref="cta41103" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_ingresos"/>
+        </record>
+
+        <record id="cta4110303" model="account.account.template">
+            <field name="code">4110303</field>
+            <field name="name">Accesorios</field>
+            <field ref="cta41103" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_ingresos"/>
+        </record>
+
+        <record id="cta41105" model="account.account.template">
+            <field name="code">41105</field>
+            <field name="name">Ventas Mazatenango</field>
+            <field ref="cta411" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_ingresos"/>
+        </record>
+
+        <record id="cta4110501" model="account.account.template">
+            <field name="code">4110501</field>
+            <field name="name">Productos</field>
+            <field ref="cta41105" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_ingresos"/>
+        </record>
+
+        <record id="cta4110503" model="account.account.template">
+            <field name="code">4110503</field>
+            <field name="name">Accesorios</field>
+            <field ref="cta41105" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_ingresos"/>
+        </record>
+
+        <record id="cta45" model="account.account.template">
+            <field name="code">45</field>
+            <field name="name">Otros Ingresos</field>
+            <field ref="cta4" name="parent_id"/>
+            <field name="type">view</field>
+            <field name="user_type" ref="cuenta_vista"/>
+        </record>
+
+        <record id="cta451" model="account.account.template">
+            <field name="code">451</field>
+            <field name="name">Otros Ingresos</field>
+            <field ref="cta45" name="parent_id"/>
+            <field name="type">view</field>
+            <field name="user_type" ref="cuenta_vista"/>
+        </record>
+
+        <record id="cta45101" model="account.account.template">
+            <field name="code">45101</field>
+            <field name="name">Otros</field>
+            <field ref="cta451" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_ingresos"/>
+        </record>
+
+        <record id="cta45102" model="account.account.template">
+            <field name="code">45102</field>
+            <field name="name">Intereses Bancarios</field>
+            <field ref="cta451" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_ingresos"/>
+        </record>
+
+        <record id="cta45103" model="account.account.template">
+            <field name="code">45103</field>
+            <field name="name">Diferencia tipo de cambio</field>
+            <field ref="cta451" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_ingresos"/>
+        </record>
+
+        <record id="cta5" model="account.account.template">
+            <field name="code">5</field>
+            <field name="name">Costos y Gastos</field>
+            <field ref="er" name="parent_id"/>
+            <field name="type">view</field>
+            <field name="user_type" ref="cuenta_vista"/>
+        </record>
+
+        <record id="cta51" model="account.account.template">
+            <field name="code">51</field>
+            <field name="name">Costo de Ventas</field>
+            <field ref="cta5" name="parent_id"/>
+            <field name="type">view</field>
+            <field name="user_type" ref="cuenta_vista"/>
+        </record>
+
+        <record id="cta510" model="account.account.template">
+            <field name="code">510</field>
+            <field name="name">Costos de Ventas</field>
+            <field ref="cta51" name="parent_id"/>
+            <field name="type">view</field>
+            <field name="user_type" ref="cuenta_vista"/>
+        </record>
+
+        <record id="cta51001" model="account.account.template">
+            <field name="code">51001</field>
+            <field name="name">Guatemala</field>
+            <field ref="cta510" name="parent_id"/>
+            <field name="type">view</field>
+            <field name="user_type" ref="cuenta_vista"/>
+        </record>
+
+         <record id="cta5100101" model="account.account.template">
+            <field name="code">5100101</field>
+            <field name="name">Costo de Productos</field>
+            <field ref="cta51001" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_gastos"/>
+        </record>
+
+        <record id="cta5100102" model="account.account.template">
+            <field name="code">5100102</field>
+            <field name="name">Costo de Accesorios</field>
+            <field ref="cta51001" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_gastos"/>
+        </record>
+
+        <record id="cta51002" model="account.account.template">
+            <field name="code">51002</field>
+            <field name="name">Quetzaltenango</field>
+            <field ref="cta510" name="parent_id"/>
+            <field name="type">view</field>
+            <field name="user_type" ref="cuenta_vista"/>
+        </record>
+
+         <record id="cta5100201" model="account.account.template">
+            <field name="code">5100201</field>
+            <field name="name">Costo de Productos</field>
+            <field ref="cta51002" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_gastos"/>
+        </record>
+
+        <record id="cta5100202" model="account.account.template">
+            <field name="code">5100202</field>
+            <field name="name">Costo de Accesorios</field>
+            <field ref="cta51002" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_gastos"/>
+        </record>
+
+        <record id="cta51003" model="account.account.template">
+            <field name="code">51003</field>
+            <field name="name">Huehuetenango</field>
+            <field ref="cta510" name="parent_id"/>
+            <field name="type">view</field>
+            <field name="user_type" ref="cuenta_vista"/>
+        </record>
+
+         <record id="cta5100301" model="account.account.template">
+            <field name="code">5100301</field>
+            <field name="name">Costo de Productos</field>
+            <field ref="cta51003" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_gastos"/>
+        </record>
+
+        <record id="cta5100302" model="account.account.template">
+            <field name="code">5100302</field>
+            <field name="name">Costo de Accesorios</field>
+            <field ref="cta51003" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_gastos"/>
+        </record>
+
+        <record id="cta51005" model="account.account.template">
+            <field name="code">51005</field>
+            <field name="name">Mazatenango</field>
+            <field ref="cta510" name="parent_id"/>
+            <field name="type">view</field>
+            <field name="user_type" ref="cuenta_vista"/>
+        </record>
+
+         <record id="cta5100501" model="account.account.template">
+            <field name="code">5100501</field>
+            <field name="name">Costo de Productos</field>
+            <field ref="cta51005" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_gastos"/>
+        </record>
+
+        <record id="cta5100502" model="account.account.template">
+            <field name="code">5100502</field>
+            <field name="name">Costo de Accesorios</field>
+            <field ref="cta51005" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_gastos"/>
+        </record>
+
+        <record id="cta52" model="account.account.template">
+            <field name="code">52</field>
+            <field name="name">Gastos de Operacion</field>
+            <field ref="cta5" name="parent_id"/>
+            <field name="type">view</field>
+            <field name="user_type" ref="cuenta_vista"/>
+        </record>
+
+        <record id="cta521" model="account.account.template">
+            <field name="code">521</field>
+            <field name="name">Gastos de Tiendas</field>
+            <field ref="cta52" name="parent_id"/>
+            <field name="type">view</field>
+            <field name="user_type" ref="cuenta_vista"/>
+        </record>
+
+
+        <record id="cta52101" model="account.account.template">
+            <field name="code">52101</field>
+            <field name="name">Guatemala</field>
+            <field ref="cta521" name="parent_id"/>
+            <field name="type">view</field>
+            <field name="user_type" ref="cuenta_vista"/>
+        </record>
+
+        <record id="cta5210101" model="account.account.template">
+            <field name="code">5210101</field>
+            <field name="name">Nominas</field>
+            <field ref="cta52101" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_gastos"/>
+        </record>
+
+        <record id="cta5210102" model="account.account.template">
+            <field name="code">5210102</field>
+            <field name="name">Compensaciones</field>
+            <field ref="cta52101" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_gastos"/>
+        </record>
+
+        <record id="cta5210104" model="account.account.template">
+            <field name="code">5210104</field>
+            <field name="name">Provision Social</field>
+            <field ref="cta52101" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_gastos"/>
+        </record>
+
+        <record id="cta5210105" model="account.account.template">
+            <field name="code">5210105</field>
+            <field name="name">Vacaciones</field>
+            <field ref="cta52101" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_gastos"/>
+        </record>
+
+        <record id="cta5210106" model="account.account.template">
+            <field name="code">5210106</field>
+            <field name="name">Aguinaldo</field>
+            <field ref="cta52101" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_gastos"/>
+        </record>
+
+        <record id="cta5210107" model="account.account.template">
+            <field name="code">5210107</field>
+            <field name="name">Bono 14</field>
+            <field ref="cta52101" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_gastos"/>
+        </record>
+
+        <record id="cta5210108" model="account.account.template">
+            <field name="code">5210108</field>
+            <field name="name">Indemnizacion</field>
+            <field ref="cta52101" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_gastos"/>
+        </record>
+
+        <record id="cta5210109" model="account.account.template">
+            <field name="code">5210109</field>
+            <field name="name">Gastos de Viaje</field>
+            <field ref="cta52101" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_gastos"/>
+        </record>
+
+        <record id="cta5210111" model="account.account.template">
+            <field name="code">5210111</field>
+            <field name="name">Combustibles y Lubricantes</field>
+            <field ref="cta52101" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_gastos"/>
+        </record>
+
+        <record id="cta5210112" model="account.account.template">
+            <field name="code">5210112</field>
+            <field name="name">Reparacion y Mantenimiento</field>
+            <field ref="cta52101" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_gastos"/>
+        </record>
+
+        <record id="cta5210113" model="account.account.template">
+            <field name="code">5210113</field>
+            <field name="name">Papeleria y Utiles</field>
+            <field ref="cta52101" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_gastos"/>
+        </record>
+
+        <record id="cta5210114" model="account.account.template">
+            <field name="code">5210114</field>
+            <field name="name">Atencion a Empleados</field>
+            <field ref="cta52101" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_gastos"/>
+        </record>
+
+        <record id="cta5210115" model="account.account.template">
+            <field name="code">5210115</field>
+            <field name="name">Fletes y Acarreos</field>
+            <field ref="cta52101" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_gastos"/>
+        </record>
+
+        <record id="cta5210117" model="account.account.template">
+            <field name="code">5210117</field>
+            <field name="name">Telefonos</field>
+            <field ref="cta52101" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_gastos"/>
+        </record>
+
+        <record id="cta5210118" model="account.account.template">
+            <field name="code">5210118</field>
+            <field name="name">Publicidad y anuncios</field>
+            <field ref="cta52101" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_gastos"/>
+        </record>
+
+        <record id="cta5210119" model="account.account.template">
+            <field name="code">5210119</field>
+            <field name="name">Honorarios por Servicios de</field>
+            <field ref="cta52101" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_gastos"/>
+        </record>
+
+        <record id="cta5210121" model="account.account.template">
+            <field name="code">5210121</field>
+            <field name="name">Alquileres y Arrendamientos</field>
+            <field ref="cta52101" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_gastos"/>
+        </record>
+
+        <record id="cta5210128" model="account.account.template">
+            <field name="code">5210128</field>
+            <field name="name">Honorarios Profesionales</field>
+            <field ref="cta52101" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_gastos"/>
+        </record>
+
+        <record id="cta5210130" model="account.account.template">
+            <field name="code">5210130</field>
+            <field name="name">Atencion a Clientes</field>
+            <field ref="cta52101" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_gastos"/>
+        </record>
+
+        <record id="cta5210131" model="account.account.template">
+            <field name="code">5210131</field>
+            <field name="name">Eventos</field>
+            <field ref="cta52101" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_gastos"/>
+        </record>
+
+        <record id="cta5210134" model="account.account.template">
+            <field name="code">5210134</field>
+            <field name="name">Seguros y Fianzas</field>
+            <field ref="cta52101" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_gastos"/>
+        </record>
+
+        <record id="cta5210137" model="account.account.template">
+            <field name="code">5210137</field>
+            <field name="name">Dep. Mobiliario y Equipo</field>
+            <field ref="cta52101" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_gastos"/>
+        </record>
+
+        <record id="cta5210138" model="account.account.template">
+            <field name="code">5210138</field>
+            <field name="name">Dep. Vehiculos</field>
+            <field ref="cta52101" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_gastos"/>
+        </record>
+
+        <record id="cta5210139" model="account.account.template">
+            <field name="code">5210139</field>
+            <field name="name">Dep. Equipo de Comutacion</field>
+            <field ref="cta52101" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_gastos"/>
+        </record>
+
+        <record id="cta5210140" model="account.account.template">
+            <field name="code">5210140</field>
+            <field name="name">Amort. Registros</field>
+            <field ref="cta52101" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_gastos"/>
+        </record>
+
+        <record id="cta5210141" model="account.account.template">
+            <field name="code">5210141</field>
+            <field name="name">Amort. Marcas y Patentes</field>
+            <field ref="cta52101" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_gastos"/>
+        </record>
+
+        <record id="cta5210142" model="account.account.template">
+            <field name="code">5210142</field>
+            <field name="name">Dep. Mejora a Propiedades</field>
+            <field ref="cta52101" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_gastos"/>
+        </record>
+
+        <record id="cta5210144" model="account.account.template">
+            <field name="code">5210144</field>
+            <field name="name">Energia Electrica</field>
+            <field ref="cta52101" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_gastos"/>
+        </record>
+
+        <record id="cta5210154" model="account.account.template">
+            <field name="code">5210154</field>
+            <field name="name">Material y Empaque</field>
+            <field ref="cta52101" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_gastos"/>
+        </record>
+
+        <record id="cta5210157" model="account.account.template">
+            <field name="code">5210157</field>
+            <field name="name">Promociones</field>
+            <field ref="cta52101" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_gastos"/>
+        </record>
+
+        <record id="cta5210163" model="account.account.template">
+            <field name="code">5210163</field>
+            <field name="name">Cuentas Incobrables</field>
+            <field ref="cta52101" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_gastos"/>
+        </record>
+
+        <record id="cta5210166" model="account.account.template">
+            <field name="code">5210166</field>
+            <field name="name">Perdida en Inventario</field>
+            <field ref="cta52101" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_gastos"/>
+        </record>
+
+        <record id="cta52102" model="account.account.template">
+            <field name="code">52102</field>
+            <field name="name">Quetzaltenango</field>
+            <field ref="cta521" name="parent_id"/>
+            <field name="type">view</field>
+            <field name="user_type" ref="cuenta_vista"/>
+        </record>
+
+        <record id="cta5210201" model="account.account.template">
+            <field name="code">5210201</field>
+            <field name="name">Nominas</field>
+            <field ref="cta52102" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_gastos"/>
+        </record>
+
+
+        <record id="cta5210204" model="account.account.template">
+            <field name="code">5210204</field>
+            <field name="name">Provision Social</field>
+            <field ref="cta52102" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_gastos"/>
+        </record>
+
+
+        <record id="cta5210206" model="account.account.template">
+            <field name="code">5210206</field>
+            <field name="name">Aguinaldo</field>
+            <field ref="cta52102" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_gastos"/>
+        </record>
+
+        <record id="cta5210207" model="account.account.template">
+            <field name="code">5210207</field>
+            <field name="name">Bono 14</field>
+            <field ref="cta52102" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_gastos"/>
+        </record>
+
+        <record id="cta5210208" model="account.account.template">
+            <field name="code">5210208</field>
+            <field name="name">Indemnizacion</field>
+            <field ref="cta52102" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_gastos"/>
+        </record>
+
+        <record id="cta5210209" model="account.account.template">
+            <field name="code">5210209</field>
+            <field name="name">Gastos de Viaje</field>
+            <field ref="cta52102" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_gastos"/>
+        </record>
+
+        <record id="cta5210211" model="account.account.template">
+            <field name="code">5210211</field>
+            <field name="name">Combustibles y Lubricantes</field>
+            <field ref="cta52102" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_gastos"/>
+        </record>
+
+        <record id="cta5210212" model="account.account.template">
+            <field name="code">5210212</field>
+            <field name="name">Reparacion y Mantenimiento</field>
+            <field ref="cta52102" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_gastos"/>
+        </record>
+
+        <record id="cta5210213" model="account.account.template">
+            <field name="code">5210213</field>
+            <field name="name">Papeleria y Utiles</field>
+            <field ref="cta52102" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_gastos"/>
+        </record>
+
+        <record id="cta5210217" model="account.account.template">
+            <field name="code">5210217</field>
+            <field name="name">Telefonos</field>
+            <field ref="cta52102" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_gastos"/>
+        </record>
+
+        <record id="cta5210219" model="account.account.template">
+            <field name="code">5210219</field>
+            <field name="name">Aseo y Limpieza</field>
+            <field ref="cta52102" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_gastos"/>
+        </record>
+
+        <record id="cta5210221" model="account.account.template">
+            <field name="code">5210221</field>
+            <field name="name">Alquileres y Arrendamientos</field>
+            <field ref="cta52102" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_gastos"/>
+        </record>
+
+        <record id="cta5210228" model="account.account.template">
+            <field name="code">5210228</field>
+            <field name="name">Honorarios Profesionales</field>
+            <field ref="cta52102" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_gastos"/>
+        </record>
+
+        <record id="cta5210230" model="account.account.template">
+            <field name="code">5210230</field>
+            <field name="name">Atencion a Clientes</field>
+            <field ref="cta52102" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_gastos"/>
+        </record>
+
+        <record id="cta5210231" model="account.account.template">
+            <field name="code">5210231</field>
+            <field name="name">Eventos</field>
+            <field ref="cta52102" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_gastos"/>
+        </record>
+
+        <record id="cta5210234" model="account.account.template">
+            <field name="code">5210234</field>
+            <field name="name">Seguros y Fianzas</field>
+            <field ref="cta52102" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_gastos"/>
+        </record>
+
+        <record id="cta5210244" model="account.account.template">
+            <field name="code">5210244</field>
+            <field name="name">Energia Electrica</field>
+            <field ref="cta52102" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_gastos"/>
+        </record>
+
+        <record id="cta5210254" model="account.account.template">
+            <field name="code">5210254</field>
+            <field name="name">Material y Empaque</field>
+            <field ref="cta52102" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_gastos"/>
+        </record>
+
+        <record id="cta52103" model="account.account.template">
+            <field name="code">52103</field>
+            <field name="name">Huehuetenango</field>
+            <field ref="cta521" name="parent_id"/>
+            <field name="type">view</field>
+            <field name="user_type" ref="cuenta_vista"/>
+        </record>
+
+        <record id="cta5210301" model="account.account.template">
+            <field name="code">5210301</field>
+            <field name="name">Nominas</field>
+            <field ref="cta52103" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_gastos"/>
+        </record>
+
+        <record id="cta5210304" model="account.account.template">
+            <field name="code">5210304</field>
+            <field name="name">Provision Social</field>
+            <field ref="cta52103" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_gastos"/>
+        </record>
+
+
+        <record id="cta5210306" model="account.account.template">
+            <field name="code">5210306</field>
+            <field name="name">Aguinaldo</field>
+            <field ref="cta52103" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_gastos"/>
+        </record>
+
+        <record id="cta5210307" model="account.account.template">
+            <field name="code">5210307</field>
+            <field name="name">Bono 14</field>
+            <field ref="cta52103" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_gastos"/>
+        </record>
+
+        <record id="cta5210308" model="account.account.template">
+            <field name="code">5210308</field>
+            <field name="name">Indemnizacion</field>
+            <field ref="cta52103" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_gastos"/>
+        </record>
+
+        <record id="cta5210309" model="account.account.template">
+            <field name="code">5210309</field>
+            <field name="name">Viaticos</field>
+            <field ref="cta52103" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_gastos"/>
+        </record>
+
+        <record id="cta5210310" model="account.account.template">
+            <field name="code">5210310</field>
+            <field name="name">Beneficio a Empleados</field>
+            <field ref="cta52103" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_gastos"/>
+        </record>
+
+        <record id="cta5210311" model="account.account.template">
+            <field name="code">5210311</field>
+            <field name="name">Combustibles y Lubricantes</field>
+            <field ref="cta52103" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_gastos"/>
+        </record>
+
+        <record id="cta5210312" model="account.account.template">
+            <field name="code">5210312</field>
+            <field name="name">Reparacion y Mantenimiento</field>
+            <field ref="cta52103" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_gastos"/>
+        </record>
+
+        <record id="cta5210313" model="account.account.template">
+            <field name="code">5210313</field>
+            <field name="name">Papeleria y Utiles</field>
+            <field ref="cta52103" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_gastos"/>
+        </record>
+
+        <record id="cta5210315" model="account.account.template">
+            <field name="code">5210315</field>
+            <field name="name">Fletes y Acarreos</field>
+            <field ref="cta52103" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_gastos"/>
+        </record>
+
+        <record id="cta5210317" model="account.account.template">
+            <field name="code">5210317</field>
+            <field name="name">Telefono y Correo</field>
+            <field ref="cta52103" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_gastos"/>
+        </record>
+
+        <record id="cta5210319" model="account.account.template">
+            <field name="code">5210319</field>
+            <field name="name">Honorarios por servicios de</field>
+            <field ref="cta52103" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_gastos"/>
+        </record>
+
+        <record id="cta5210321" model="account.account.template">
+            <field name="code">5210321</field>
+            <field name="name">Alquileres y Arrendamientos</field>
+            <field ref="cta52103" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_gastos"/>
+        </record>
+
+        <record id="cta5210328" model="account.account.template">
+            <field name="code">5210328</field>
+            <field name="name">Honorarios Profesionales</field>
+            <field ref="cta52103" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_gastos"/>
+        </record>
+
+        <record id="cta5210330" model="account.account.template">
+            <field name="code">5210330</field>
+            <field name="name">Atencion a Clientes</field>
+            <field ref="cta52103" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_gastos"/>
+        </record>
+
+
+        <record id="cta5210334" model="account.account.template">
+            <field name="code">5210334</field>
+            <field name="name">Seguros y Fianzas</field>
+            <field ref="cta52103" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_gastos"/>
+        </record>
+
+        <record id="cta5210344" model="account.account.template">
+            <field name="code">5210344</field>
+            <field name="name">Energia Electrica</field>
+            <field ref="cta52103" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_gastos"/>
+        </record>
+
+        <record id="cta5210346" model="account.account.template">
+            <field name="code">5210346</field>
+            <field name="name">Fumigacion</field>
+            <field ref="cta52103" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_gastos"/>
+        </record>
+
+        <record id="cta5210399" model="account.account.template">
+            <field name="code">5210399</field>
+            <field name="name">Varios</field>
+            <field ref="cta52103" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_gastos"/>
+        </record>
+
+        <record id="cta52105" model="account.account.template">
+            <field name="code">52105</field>
+            <field name="name">Mazatenango</field>
+            <field ref="cta521" name="parent_id"/>
+            <field name="type">view</field>
+            <field name="user_type" ref="cuenta_vista"/>
+        </record>
+
+        <record id="cta5210528" model="account.account.template">
+            <field name="code">5210528</field>
+            <field name="name">Honorarios Profesionales</field>
+            <field ref="cta52105" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_gastos"/>
+        </record>
+
+        <record id="cta5210535" model="account.account.template">
+            <field name="code">5210535</field>
+            <field name="name">Almacenaje</field>
+            <field ref="cta52105" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_gastos"/>
+        </record>
+
+        <record id="cta523" model="account.account.template">
+            <field name="code">523</field>
+            <field name="name">Gastos de Administracion</field>
+            <field ref="cta52" name="parent_id"/>
+            <field name="type">view</field>
+            <field name="user_type" ref="cuenta_vista"/>
+        </record>
+
+         <record id="cta52301" model="account.account.template">
+            <field name="code">52301</field>
+            <field name="name">Nominas</field>
+            <field ref="cta523" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_gastos"/>
+        </record>
+
+        <record id="cta52304" model="account.account.template">
+            <field name="code">52304</field>
+            <field name="name">Provision Social</field>
+            <field ref="cta523" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_gastos"/>
+        </record>
+
+        <record id="cta52306" model="account.account.template">
+            <field name="code">52306</field>
+            <field name="name">Aguinaldo</field>
+            <field ref="cta523" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_gastos"/>
+        </record>
+
+        <record id="cta52308" model="account.account.template">
+            <field name="code">52308</field>
+            <field name="name">Bono 14</field>
+            <field ref="cta523" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_gastos"/>
+        </record>
+
+        <record id="cta52309" model="account.account.template">
+            <field name="code">52309</field>
+            <field name="name">Gastos de viaje</field>
+            <field ref="cta523" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_gastos"/>
+        </record>
+
+        <record id="cta52310" model="account.account.template">
+            <field name="code">52310</field>
+            <field name="name">Beneficios a Empleados</field>
+            <field ref="cta523" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_gastos"/>
+        </record>
+
+        <record id="cta52311" model="account.account.template">
+            <field name="code">52311</field>
+            <field name="name">Combustibles y Lubricantes</field>
+            <field ref="cta523" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_gastos"/>
+        </record>
+
+        <record id="cta52312" model="account.account.template">
+            <field name="code">523012</field>
+            <field name="name">Reparacion y Mantenimiento</field>
+            <field ref="cta523" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_gastos"/>
+        </record>
+
+        <record id="cta52313" model="account.account.template">
+            <field name="code">52313</field>
+            <field name="name">Papeleria y Utiles</field>
+            <field ref="cta523" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_gastos"/>
+        </record>
+
+        <record id="cta52317" model="account.account.template">
+            <field name="code">52317</field>
+            <field name="name">Telefonos</field>
+            <field ref="cta523" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_gastos"/>
+        </record>
+
+        <record id="cta52319" model="account.account.template">
+            <field name="code">52319</field>
+            <field name="name">Seguros y Fianzas</field>
+            <field ref="cta523" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_gastos"/>
+        </record>
+
+        <record id="cta52320" model="account.account.template">
+            <field name="code">52320</field>
+            <field name="name">Honorarios Profesionales</field>
+            <field ref="cta523" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_gastos"/>
+        </record>
+
+        <record id="cta52321" model="account.account.template">
+            <field name="code">52321</field>
+            <field name="name">Impuestos y Contribuciones</field>
+            <field ref="cta523" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_gastos"/>
+        </record>
+
+        <record id="cta52322" model="account.account.template">
+            <field name="code">52322</field>
+            <field name="name">Timbre de Prensa</field>
+            <field ref="cta523" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_gastos"/>
+        </record>
+
+        <record id="cta52327" model="account.account.template">
+            <field name="code">52327</field>
+            <field name="name">Aseo y Limpieza</field>
+            <field ref="cta523" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_gastos"/>
+        </record>
+
+        <record id="cta52328" model="account.account.template">
+            <field name="code">52328</field>
+            <field name="name">Seguridad y Vigilancia</field>
+            <field ref="cta523" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_gastos"/>
+        </record>
+
+        <record id="cta52330" model="account.account.template">
+            <field name="code">52330</field>
+            <field name="name">Dietas</field>
+            <field ref="cta523" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_gastos"/>
+        </record>
+
+        <record id="cta52332" model="account.account.template">
+            <field name="code">52332</field>
+            <field name="name">Gastos de Viaje a GDL</field>
+            <field ref="cta523" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_gastos"/>
+        </record>
+
+        <record id="cta52335" model="account.account.template">
+            <field name="code">52335</field>
+            <field name="name">Comisiones Bancarias</field>
+            <field ref="cta523" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_gastos"/>
+        </record>
+
+        <record id="cta52350" model="account.account.template">
+            <field name="code">52350</field>
+            <field name="name">Varios</field>
+            <field ref="cta523" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_gastos"/>
+        </record>
+
+        <record id="cta53" model="account.account.template">
+            <field name="code">53</field>
+            <field name="name">Otros Gastos</field>
+            <field ref="cta5" name="parent_id"/>
+            <field name="type">view</field>
+            <field name="user_type" ref="cuenta_vista"/>
+        </record>
+
+        <record id="cta535" model="account.account.template">
+            <field name="code">535</field>
+            <field name="name">Otros Gastos</field>
+            <field ref="cta53" name="parent_id"/>
+            <field name="type">view</field>
+            <field name="user_type" ref="cuenta_vista"/>
+        </record>
+
+        <record id="cta53503" model="account.account.template">
+            <field name="code">53503</field>
+            <field name="name">Perdida en tipo de Cambio</field>
+            <field ref="cta535" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_gastos"/>
+        </record>
+
+        <record id="cta53504" model="account.account.template">
+            <field name="code">53504</field>
+            <field name="name">Multas y Recargos</field>
+            <field ref="cta535" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_gastos"/>
+        </record>
+
+    </data>
+
+</openerp>
