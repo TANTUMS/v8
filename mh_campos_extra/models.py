@@ -11,6 +11,7 @@ class mh_campos_extra(models.Model):
 	id_um   = fields.Integer(string='Id UM')
 	barcode = fields.Char('BarCode')
 	id_iva_type = fields.Integer('Id IVA Type')
+	mule_sync = fields.Boolean(string='Mule Sync Flag',default=False,index=True)
 
 
 #     _name = 'mh_campos_extra.mh_campos_extra'
