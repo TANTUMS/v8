@@ -12,6 +12,7 @@
                         <group>
                             <field name="code"/>
                             <field name="barcode"/>
+                            <field name="employee_price"/>
                         </group>
                      </page>
                 </xpath>

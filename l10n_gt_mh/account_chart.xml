@@ -53,6 +53,22 @@
             <field name="user_type" ref="cuenta_vista"/>
         </record>
 
+        <record id="cta1110101" model="account.account.template">
+            <field name="code">1110101</field>
+            <field name="name">Caja Chica General</field>
+            <field ref="cta11101" name="parent_id"/>
+            <field name="type">liquidity</field>
+            <field name="user_type" ref="cuenta_efectivo"/>
+        </record>
+
+        <record id="cta1110102" model="account.account.template">
+            <field name="code">1110102</field>
+            <field name="name">Caja Chica Guatemala</field>
+            <field ref="cta11101" name="parent_id"/>
+            <field name="type">liquidity</field>
+            <field name="user_type" ref="cuenta_efectivo"/>
+        </record>
+
         <record id="cta1110103" model="account.account.template">
             <field name="code">1110103</field>
             <field name="name">Caja Chica Quetzaltenango</field>
@@ -87,7 +103,15 @@
 
         <record id="cta1110110" model="account.account.template">
             <field name="code">1110110</field>
-            <field name="name">Caja Chica de Guatemala</field>
+            <field name="name">Caja Chica Cnv Guatemala</field>
+            <field ref="cta11101" name="parent_id"/>
+            <field name="type">liquidity</field>
+            <field name="user_type" ref="cuenta_efectivo"/>
+        </record>
+
+        <record id="cta1110111" model="account.account.template">
+            <field name="code">1110111</field>
+            <field name="name">Fondo de Viaticos Sr. Martinez</field>
             <field ref="cta11101" name="parent_id"/>
             <field name="type">liquidity</field>
             <field name="user_type" ref="cuenta_efectivo"/>
@@ -119,6 +143,14 @@
 
         <record id="cta1110205" model="account.account.template">
             <field name="code">1110205</field>
+            <field name="name">Bac(90-011197-2)</field>
+            <field ref="cta11102" name="parent_id"/>
+            <field name="type">liquidity</field>
+            <field name="user_type" ref="cuenta_efectivo"/>
+        </record>
+
+        <record id="cta1110206" model="account.account.template">
+            <field name="code">1110206</field>
             <field name="name">Bantrab(101-039341-3)</field>
             <field ref="cta11102" name="parent_id"/>
             <field name="type">liquidity</field>
@@ -133,9 +165,33 @@
             <field name="user_type" ref="cuenta_efectivo"/>
         </record>
 
+        <record id="cta1110208" model="account.account.template">
+            <field name="code">1110208</field>
+            <field name="name">Bantigua Ahorro</field>
+            <field ref="cta11102" name="parent_id"/>
+            <field name="type">liquidity</field>
+            <field name="user_type" ref="cuenta_efectivo"/>
+        </record>
+
         <record id="cta1110209" model="account.account.template">
             <field name="code">1110209</field>
             <field name="name">Bantrab Dolares $ (90-036293-0)</field>
+            <field ref="cta11102" name="parent_id"/>
+            <field name="type">liquidity</field>
+            <field name="user_type" ref="cuenta_efectivo"/>
+        </record>
+
+        <record id="cta1110210" model="account.account.template">
+            <field name="code">1110210</field>
+            <field name="name">Bancasol Q</field>
+            <field ref="cta11102" name="parent_id"/>
+            <field name="type">liquidity</field>
+            <field name="user_type" ref="cuenta_efectivo"/>
+        </record>
+
+        <record id="cta1110211" model="account.account.template">
+            <field name="code">1110211</field>
+            <field name="name">Bancasol $</field>
             <field ref="cta11102" name="parent_id"/>
             <field name="type">liquidity</field>
             <field name="user_type" ref="cuenta_efectivo"/>
@@ -173,6 +229,38 @@
             <field name="user_type" ref="cuenta_efectivo"/>
         </record>
 
+        <record id="cta1110216" model="account.account.template">
+            <field name="code">1110216</field>
+            <field name="name">Depositos a Plazo Fijo</field>
+            <field ref="cta11102" name="parent_id"/>
+            <field name="type">liquidity</field>
+            <field name="user_type" ref="cuenta_efectivo"/>
+        </record>
+
+        <record id="cta1110217" model="account.account.template">
+            <field name="code">1110217</field>
+            <field name="name">Depositos a Plazo Fijo 2</field>
+            <field ref="cta11102" name="parent_id"/>
+            <field name="type">liquidity</field>
+            <field name="user_type" ref="cuenta_efectivo"/>
+        </record>
+
+        <record id="cta1110218" model="account.account.template">
+            <field name="code">1110218</field>
+            <field name="name">Depositos a Plazo Fijo 3</field>
+            <field ref="cta11102" name="parent_id"/>
+            <field name="type">liquidity</field>
+            <field name="user_type" ref="cuenta_efectivo"/>
+        </record>
+
+        <record id="cta1110219" model="account.account.template">
+            <field name="code">1110219</field>
+            <field name="name">Depositos a Plazo Fijo 4</field>
+            <field ref="cta11102" name="parent_id"/>
+            <field name="type">liquidity</field>
+            <field name="user_type" ref="cuenta_efectivo"/>
+        </record>
+
         <record id="cta1110220" model="account.account.template">
             <field name="code">1110220</field>
             <field name="name">Cheques Rechazados</field>
@@ -193,9 +281,19 @@
             <field name="code">11201</field>
             <field name="name">Clientes</field>
             <field ref="cta112" name="parent_id"/>
-            <field name="type">view</field>
-            <field name="user_type" ref="cuenta_vista"/>
+            <field name="type">receivable</field>
+            <field name="user_type" ref="cuenta_cxc"/>
         </record>
+
+        <record id="cta11202" model="account.account.template">
+            <field name="code">11202</field>
+            <field name="name">Reserva Cuentas Incobrables</field>
+            <field ref="cta112" name="parent_id"/>
+            <field name="type">receivable</field>
+            <field name="user_type" ref="cuenta_cxc"/>
+        </record>
+
+
 
         <record id="cta11203" model="account.account.template">
             <field name="code">11203</field>
@@ -369,7 +467,7 @@
         <record id="cta1140101" model="account.account.template">
             <field name="code">1140101</field>
             <field name="name">Inventario de Productos</field>
-            <field ref="cta114" name="parent_id"/>
+            <field ref="cta11401" name="parent_id"/>
             <field name="type">other</field>
             <field name="user_type" ref="cuenta_activo"/>
         </record>
@@ -377,7 +475,15 @@
         <record id="cta1140102" model="account.account.template">
             <field name="code">1140102</field>
             <field name="name">Inventario de Accesorios</field>
-            <field ref="cta114" name="parent_id"/>
+            <field ref="cta11401" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_activo"/>
+        </record>
+
+        <record id="cta1140103" model="account.account.template">
+            <field name="code">1140103</field>
+            <field name="name">Inventario de Cosmeticos</field>
+            <field ref="cta11401" name="parent_id"/>
             <field name="type">other</field>
             <field name="user_type" ref="cuenta_activo"/>
         </record>
@@ -393,7 +499,7 @@
         <record id="cta1140201" model="account.account.template">
             <field name="code">1140201</field>
             <field name="name">Inventario de Productos</field>
-            <field ref="cta114" name="parent_id"/>
+            <field ref="cta11402" name="parent_id"/>
             <field name="type">other</field>
             <field name="user_type" ref="cuenta_activo"/>
         </record>
@@ -401,7 +507,15 @@
         <record id="cta1140202" model="account.account.template">
             <field name="code">1140202</field>
             <field name="name">Inventario de Accesorios</field>
-            <field ref="cta114" name="parent_id"/>
+            <field ref="cta11402" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_activo"/>
+        </record>
+
+        <record id="cta1140203" model="account.account.template">
+            <field name="code">1140203</field>
+            <field name="name">Inventario de Cosmeticos</field>
+            <field ref="cta11402" name="parent_id"/>
             <field name="type">other</field>
             <field name="user_type" ref="cuenta_activo"/>
         </record>
@@ -417,7 +531,7 @@
         <record id="cta1140301" model="account.account.template">
             <field name="code">1140301</field>
             <field name="name">Inventario de Productos</field>
-            <field ref="cta114" name="parent_id"/>
+            <field ref="cta11403" name="parent_id"/>
             <field name="type">other</field>
             <field name="user_type" ref="cuenta_activo"/>
         </record>
@@ -425,7 +539,39 @@
         <record id="cta1140302" model="account.account.template">
             <field name="code">1140302</field>
             <field name="name">Inventario de Accesorios</field>
+            <field ref="cta11403" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_activo"/>
+        </record>
+
+        <record id="cta1140303" model="account.account.template">
+            <field name="code">1140303</field>
+            <field name="name">Inventario de Cosmeticos</field>
+            <field ref="cta11403" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_activo"/>
+        </record>
+
+         <record id="cta11404" model="account.account.template">
+            <field name="code">11404</field>
+            <field name="name">PETEN</field>
             <field ref="cta114" name="parent_id"/>
+            <field name="type">view</field>
+            <field name="user_type" ref="cuenta_vista"/>
+        </record>
+
+        <record id="cta1140401" model="account.account.template">
+            <field name="code">1140401</field>
+            <field name="name">Productos</field>
+            <field ref="cta11404" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_activo"/>
+        </record>
+
+        <record id="cta1140402" model="account.account.template">
+            <field name="code">1140402</field>
+            <field name="name">Accesorios</field>
+            <field ref="cta11404" name="parent_id"/>
             <field name="type">other</field>
             <field name="user_type" ref="cuenta_activo"/>
         </record>
@@ -442,6 +588,46 @@
             <field name="code">1140501</field>
             <field name="name">Productos</field>
             <field ref="cta11405" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_activo"/>
+        </record>
+
+        <record id="cta1140502" model="account.account.template">
+            <field name="code">1140502</field>
+            <field name="name">Accesorios</field>
+            <field ref="cta11405" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_activo"/>
+        </record>
+
+        <record id="cta115" model="account.account.template">
+            <field name="code">115</field>
+            <field name="name">GASTOS ANTICIPADOS</field>
+            <field ref="cta11" name="parent_id"/>
+            <field name="type">view</field>
+            <field name="user_type" ref="cuenta_vista"/>
+        </record>
+
+        <record id="cta11501" model="account.account.template">
+            <field name="code">11501</field>
+            <field name="name">Ant. S/Compras</field>
+            <field ref="cta115" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_activo"/>
+        </record>
+
+        <record id="cta11502" model="account.account.template">
+            <field name="code">11502</field>
+            <field name="name">Diferencial Ant. S/Compras</field>
+            <field ref="cta115" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_activo"/>
+        </record>
+
+        <record id="cta11505" model="account.account.template">
+            <field name="code">11505</field>
+            <field name="name">Varios</field>
+            <field ref="cta115" name="parent_id"/>
             <field name="type">other</field>
             <field name="user_type" ref="cuenta_activo"/>
         </record>
@@ -486,10 +672,18 @@
             <field name="user_type" ref="cuenta_activo"/>
         </record>
 
+        <record id="cta12102" model="account.account.template">
+            <field name="code">12102</field>
+            <field name="name">VEHICULOS</field>
+            <field ref="cta121" name="parent_id"/>
+            <field name="type">view</field>
+            <field name="user_type" ref="cuenta_vista"/>
+        </record>
+
         <record id="cta1210201" model="account.account.template">
             <field name="code">1210201</field>
             <field name="name">Costo Vehículos</field>
-            <field ref="cta12101" name="parent_id"/>
+            <field ref="cta12102" name="parent_id"/>
             <field name="type">other</field>
             <field name="user_type" ref="cuenta_activo"/>
         </record>
@@ -497,14 +691,14 @@
         <record id="cta1210202" model="account.account.template">
             <field name="code">1210202</field>
             <field name="name">Deprec. Acum. Vehículos</field>
-            <field ref="cta12101" name="parent_id"/>
+            <field ref="cta12102" name="parent_id"/>
             <field name="type">other</field>
             <field name="user_type" ref="cuenta_activo"/>
         </record>
 
         <record id="cta12103" model="account.account.template">
             <field name="code">12103</field>
-            <field name="name">Equipo de Computacion</field>
+            <field name="name">EQUIPO DE COMPUTACION/field>
             <field ref="cta121" name="parent_id"/>
             <field name="type">view</field>
             <field name="user_type" ref="cuenta_vista"/>
@@ -528,7 +722,7 @@
 
         <record id="cta12104" model="account.account.template">
             <field name="code">12104</field>
-            <field name="name">Registros Sanitarios</field>
+            <field name="name">REGISTROS SANITARIOS</field>
             <field ref="cta121" name="parent_id"/>
             <field name="type">view</field>
             <field name="user_type" ref="cuenta_vista"/>
@@ -552,7 +746,7 @@
 
         <record id="cta12107" model="account.account.template">
             <field name="code">12107</field>
-            <field name="name">Marcas y Patentes</field>
+            <field name="name">MARCAS Y PATENTES</field>
             <field ref="cta121" name="parent_id"/>
             <field name="type">view</field>
             <field name="user_type" ref="cuenta_vista"/>
@@ -576,7 +770,7 @@
 
         <record id="cta12109" model="account.account.template">
             <field name="code">12109</field>
-            <field name="name">Mejoras Propiedades Arrend.</field>
+            <field name="name">MEJORAS PROPIEDADES ARREND.</field>
             <field ref="cta121" name="parent_id"/>
             <field name="type">view</field>
             <field name="user_type" ref="cuenta_vista"/>
@@ -600,7 +794,7 @@
 
         <record id="cta122" model="account.account.template">
             <field name="code">122</field>
-            <field name="name">Otros Activos</field>
+            <field name="name">OTROS ACTIVOS</field>
             <field ref="cta12" name="parent_id"/>
             <field name="type">view</field>
             <field name="user_type" ref="cuenta_vista"/>
@@ -681,7 +875,7 @@
 
         <record id="cta2" model="account.account.template">
             <field name="code">2</field>
-            <field name="name">Pasivo</field>
+            <field name="name">PASIVO</field>
             <field ref="bal" name="parent_id"/>
             <field name="type">view</field>
             <field name="user_type" ref="cuenta_vista"/>
@@ -689,7 +883,7 @@
 
         <record id="cta21" model="account.account.template">
             <field name="code">21</field>
-            <field name="name">Corriente</field>
+            <field name="name">CORRIENTE</field>
             <field ref="cta2" name="parent_id"/>
             <field name="type">view</field>
             <field name="user_type" ref="cuenta_vista"/>
