@@ -10,6 +10,7 @@
                 <xpath expr="//page[@string='Information']" position="before">
                      <page name="mh" string="MH">
                         <group>
+                            <field name="promotion"/>
                             <field name="code"/>
                             <field name="barcode"/>
                             <field name="employee_price"/>

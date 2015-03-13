@@ -8,6 +8,7 @@ class mh_campos_extra(models.Model):
 	code   = fields.Integer(string='Code')
 	barcode = fields.Char('BarCode')
 	employee_price = fields.Float('Employee Price')
+	promotion = fields.Boolean('Promotion',default=False)
 	mule_sync = fields.Boolean(compute='_actualiza_cambio',default=False,index=True,store=True,string='Mule Sync Flag')
 
 	@api.depends('active','list_price','name','employee_price','barcode','code')
