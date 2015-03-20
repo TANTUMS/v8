@@ -9,9 +9,10 @@ class mh_campos_extra(models.Model):
 	barcode = fields.Char('BarCode')
 	employee_price = fields.Float('Employee Price')
 	promotion = fields.Boolean('Promotion',default=False)
+	points    = fields.Float('Points')
 	mule_sync = fields.Boolean(compute='_actualiza_cambio',default=False,index=True,store=True,string='Mule Sync Flag')
 
-	@api.depends('active','list_price','name','employee_price','barcode','code','promotion')
+	@api.depends('active','list_price','name','employee_price','barcode','code','promotion','points')
 	def _actualiza_cambio(self):
 		for rec in self:
 			self.mule_sync = False
