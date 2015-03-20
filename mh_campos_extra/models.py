@@ -6,6 +6,10 @@ class mh_campos_extra(models.Model):
 	_inherit = 'product.template'
 
 	code   = fields.Integer(string='Code')
+	dim_price_vigency_ini = fields.Date('Dim Price Vigency Initial')
+	dim_price_vigency_fin = fields.Date('Dim Price Vigency Final')
+	employee_price_vigency_ini = fields.Date('Employee Price Vigency Initial')
+	employee_price_vigency_fin = fields.Date('Employee Price Vigency Final')
 	barcode = fields.Char('BarCode')
 	employee_price = fields.Float('Employee Price')
 	promotion = fields.Boolean('Promotion',default=False)

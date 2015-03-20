@@ -15,6 +15,10 @@
                             <field name="barcode"/>
                             <field name="employee_price"/>
                             <field name="points"/>
+                            <field name="dim_price_vigency_ini"/>
+                            <field name="dim_price_vigency_fin"/>
+                            <field name="employee_price_vigency_ini"/>
+                            <field name="employee_price_vigency_fin"/>
                         </group>
                      </page>
                 </xpath>
