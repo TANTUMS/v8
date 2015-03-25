@@ -13,9 +13,9 @@
             <field name="tax_code_root_id" ref="impuestos_raiz"/>
             <field name="bank_account_view_id" ref="cta11102"/>
             <field name="property_account_receivable" ref="cta11201"/>
-            <field name="property_account_payable" ref="cta21201"/>
-            <field name="property_account_income_categ" ref="cta41101"/>
-            <field name="property_account_expense_categ" ref="cta51001"/>
+            <field name="property_account_payable" ref="cta22101"/>
+            <field name="property_account_income_categ" ref="cta4110101"/>
+            <field name="property_account_expense_categ" ref="cta510"/>
             <field name="currency_id" ref="base.QTQ"/>
         </record>
 
@@ -27,7 +27,7 @@
             <field name="amount" eval="0.12"/>
             <field name="type">percent</field>
             <field name="account_collected_id" ref="cta1120601"/>
-            <field name="account_paid_id" ref="cta1120603"/>
+            <field name="account_paid_id" ref="cta1120602"/>
             <field name="base_code_id" ref="impuestos_base_iva_compras"/>
             <field name="tax_code_id" ref="impuestos_iva_por_cobrar"/>
             <field name="ref_base_code_id" ref="impuestos_base_iva_compras"/>
@@ -43,7 +43,7 @@
             <field name="name">IVA por Pagar</field>
             <field name="amount" eval="0.12"/>
             <field name="type">percent</field>
-            <field name="account_collected_id" ref="cta21201"/>
+            <field name="account_collected_id" ref="cta21301"/>
             <field name="account_paid_id" ref="cta21301"/>
             <field name="base_code_id" ref="impuestos_base_iva_ventas"/>
             <field name="tax_code_id" ref="impuestos_iva_por_pagar"/>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="view_res_partner_mh_form_inherit" model="ir.ui.view">
+            <field name="name">base.view_partner_form.mh.inherit</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <xpath expr="/form/sheet/notebook/page[@name='internal_notes']" position="before">
+                       <page name="mh_fields" string="MH">
+                            <group>
+                                    <div align="right">
+                                        <group>
+                                            <field name="id_dim" readonly="True"/>
+                                            <field name="id_sponsor" readonly="True"/>
+                                            <field name="calification" readonly="True"/>
+                                            <field name="last_name" readonly="True"/>
+                                            <field name="mother_maiden_name" readonly="True"/>
+                                            <field name="co_holder" readonly="True"/>
+                                        </group>
+                                    </div>
+                                    <div>
+                                        <group>
+                                            <field name="spouse_name" readonly="True"/>
+                                            <field name="spouse_last_name" readonly="True"/>
+                                            <field name="spouse_mother_maiden_name" readonly="True"/>
+                                            <field name="curp" readonly="True"/>
+                                            <field name="tax_register" readonly="True"/>
+                                            <field name="low_date" readonly="True"/>
+                                            <field name="sucursal" readonly="True"/>
+                                        </group>
+                                    </div>
+                            </group>
+                        </page>
+                </xpath>
+                <xpath expr="//field[@name='category_id']" position="after">
+                    <label for="id_dim"/>
+                    <field name="id_dim" readonly="True"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</openerp>
