@@ -1,22 +1,36 @@
 # -*- coding: utf-8 -*-
 
 from openerp import models, fields, api
+from datetime import datetime
+from dateutil.relativedelta import relativedelta
 
 class mh_campos_extra(models.Model):
 	_inherit = 'product.template'
 
 	code   = fields.Integer(string='Code')
-	dim_price_vigency_ini = fields.Date('Dim Price Vigency Initial')
-	dim_price_vigency_fin = fields.Date('Dim Price Vigency Final')
-	employee_price_vigency_ini = fields.Date('Employee Price Vigency Initial')
-	employee_price_vigency_fin = fields.Date('Employee Price Vigency Final')
+	dim_price_vigency_ini = fields.Date('Dim Price Vigency Initial', default=lambda *a:datetime.now().strftime('%Y-%m-%d'))
+	dim_price_vigency_fin = fields.Date('Dim Price Vigency Final', default=lambda *a: (datetime.today() + relativedelta(days=1825)).strftime('%Y-%m-%d'))
+	employee_price_vigency_ini = fields.Date('Employee Price Vigency Initial',default=lambda *a:datetime.now().strftime('%Y-%m-%d'))
+	employee_price_vigency_fin = fields.Date('Employee Price Vigency Final',default=lambda *a: (datetime.today() + relativedelta(days=1825)).strftime('%Y-%m-%d'))
 	barcode = fields.Char('BarCode')
 	employee_price = fields.Float('Employee Price')
 	promotion = fields.Boolean('Promotion',default=False)
 	points    = fields.Float('Points')
+	product_forecast_01  = fields.Float('Product Forecast 01')
+	product_forecast_02  = fields.Float('Product Forecast 02')
+	product_forecast_03  = fields.Float('Product Forecast 03')
+	product_forecast_04  = fields.Float('Product Forecast 04')
+	product_forecast_05  = fields.Float('Product Forecast 05')
+	product_forecast_06  = fields.Float('Product Forecast 06')
+	product_forecast_07  = fields.Float('Product Forecast 07')
+	product_forecast_08  = fields.Float('Product Forecast 08')
+	product_forecast_09  = fields.Float('Product Forecast 09')
+	product_forecast_10  = fields.Float('Product Forecast 10')
+	product_forecast_11  = fields.Float('Product Forecast 11')
+	product_forecast_12  = fields.Float('Product Forecast 12')
 	mule_sync = fields.Boolean(compute='_actualiza_cambio',default=False,index=True,store=True,string='Mule Sync Flag')
 
-	@api.depends('active','list_price','name','employee_price','barcode','code','promotion','points')
+	@api.depends('active','list_price','name','employee_price','barcode','code','promotion','points','employee_price_vigency_ini','employee_price_vigency_fin','dim_price_vigency_ini','dim_price_vigency_fin')
 	def _actualiza_cambio(self):
 		for rec in self:
 			self.mule_sync = False
@@ -35,8 +49,8 @@ class mh_campos_extra_mrp(models.Model):
 class mh_res_partner(models.Model):
 	_inherit = 'res.partner'
    
-	id_dim       = fields.Integer('ID Dim')
-	id_type      = fields.Integer('Id Type MegaWeb')
+	id_dim       = fields.Integer('ID Dim',readonly=True)
+	id_type      = fields.Selection(selection=[(75,'DIM'),(76,'Empleado')], string='Id Type MegaWeb', readonly=True)
 	id_sponsor   = fields.Integer('Sponsor')
 	calification = fields.Char('Calification', size=1)
 	last_name    = fields.Char('Last Name', size=20)
@@ -108,3 +122,8 @@ class mh_account_invoice_detail(models.Model):
 	_inherit = 'account.invoice.line'
 
 	id_invoice_detail    = fields.Char('Invoice Detail',size=36)
+
+class res_users(models.Model):
+    _inherit ='res.users'
+
+    warehouse_uid_id = fields.One2many(comodel_name='stock.warehouse',inverse_name='id', string='Almacen')	

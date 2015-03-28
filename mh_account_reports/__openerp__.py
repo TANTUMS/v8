@@ -1,14 +1,14 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "mh_campos_extra",
+    'name': "mh_account_reports",
 
     'summary': """
-        Campos extra para proyecto MH Centroamerica
-        """,
+        Accounting Reports for MH Guatemala""",
 
     'description': """
-        Campos extra para proyecto MH Centroamerica
-            - Productos
+        Reportes para proyecto de Mh guatemala entre ellos
+
+            - Reporte de cuadre de Montos en Ventas contra Facturacion contra Cobros
     """,
 
     'author': "Adtech",
@@ -21,12 +21,12 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base','sale','mrp'],
+    'depends': ['base'],
 
     # always loaded
     'data': [
         # 'security/ir.model.access.csv',
-        'templates.xml','view/product_product_view.xml','view/res_partner_view.xml','view/sale_order_view.xml','view/res_users_view.xml'
+        'templates.xml','view/template_cuadre_ingresos.xml'
     ],
     # only loaded in demonstration mode
     'demo': [

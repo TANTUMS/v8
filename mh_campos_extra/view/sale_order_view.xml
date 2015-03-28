@@ -14,8 +14,8 @@
                  <xpath expr="/form/sheet/group/group[2]/field[@name='currency_id']" position="after">
                     <field name="id_shop" readonly="1"/>
                     <h1>
-                        <label string="DIM"/>
-                        <field name="id_dim" class="oe_inline" readonly="1"/>
+                        <label for="id_dim"/>
+                        <field name="id_dim"/>
                     </h1>
                 </xpath>
             </field>
@@ -33,9 +33,9 @@
                 </xpath>
 
                <!-- add your group at the end -->
-                <!-- <xpath expr="//filter[@string='Creation']"  position="after">
-                    <filter string="My Groupe" domain="[]" context="{'group_by':'name'}"/>
-                </xpath>  -->                                   
+                <xpath expr="//filter[@string='Order Month']"  position="after">
+                    <filter string="DIM" domain="[]" context="{'group_by':'id_dim'}"/>
+                </xpath>                                    
                 </field>
             </record>
             <record id="inherit_view_tree_mh_sales_filter" model="ir.ui.view">

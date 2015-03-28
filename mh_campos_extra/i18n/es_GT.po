@@ -1,0 +1,450 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* mh_campos_extra
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-03-28 06:26+0000\n"
+"PO-Revision-Date: 2015-03-28 00:43-0600\n"
+"Last-Translator: Said Kuri <skuri@adtech.com.mx>\n"
+"Language-Team: Adtech <skuri@adtech.com.mx>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+"Language: es_GT\n"
+
+#. module: mh_campos_extra
+#: field:res.users,warehouse_uid_id:0
+msgid "Almacen"
+msgstr "Almacen"
+
+#. module: mh_campos_extra
+#: field:res.partner,bank_account:0
+msgid "Bank Account"
+msgstr "Cuenta Bancaria"
+
+#. module: mh_campos_extra
+#: field:product.template,barcode:0
+msgid "BarCode"
+msgstr "Codigo de Barras"
+
+#. module: mh_campos_extra
+#: field:res.partner,curp:0
+msgid "CURP"
+msgstr "CURP"
+
+#. module: mh_campos_extra
+#: field:res.partner,calification:0
+msgid "Calification"
+msgstr "Calificacion"
+
+#. module: mh_campos_extra
+#: field:res.partner,co_holder:0
+msgid "CoHolder"
+msgstr "CoHolder"
+
+#. module: mh_campos_extra
+#: field:product.template,code:0
+msgid "Code"
+msgstr "Codigo"
+
+#. module: mh_campos_extra
+#: field:res.partner,consignable:0
+msgid "Consignable"
+msgstr "Consignable"
+
+#. module: mh_campos_extra
+#: field:res.partner,consignable_amount:0
+msgid "Consignable Amount"
+msgstr "Cantidad Consignada"
+
+#. module: mh_campos_extra
+#: field:res.partner,consignable_amount_date:0
+msgid "Consignable Amount Date"
+msgstr "Fecha de Cantidad Consignada"
+
+#. module: mh_campos_extra
+#: field:res.partner,consignable_amount_in_last_cut:0
+msgid "Consignable Amount in Last Cut"
+msgstr "Cantidad Consignada Ultimo Corte"
+
+#. module: mh_campos_extra
+#: field:res.partner,credit_amount:0
+msgid "Credit Amount"
+msgstr "Credito "
+
+#. module: mh_campos_extra
+#: field:res.partner,credit_amount_date:0
+msgid "Credit Amount Date"
+msgstr "Fecha de Credito"
+
+#. module: mh_campos_extra
+#: field:res.partner,credit_amountin_last_cut:0
+msgid "Credit Amount in Last Cut"
+msgstr "Credito en el Ultimo Corte"
+
+#. module: mh_campos_extra
+#: selection:res.partner,id_type:0
+#: view:sale.order:mh_campos_extra.inherit_view_search_mh_sales_filter
+#: view:sale.order:mh_campos_extra.inherit_view_tree_mh_sales_filter
+msgid "DIM"
+msgstr "DIM"
+
+#. module: mh_campos_extra
+#: field:product.template,dim_price_vigency_fin:0
+msgid "Dim Price Vigency Final"
+msgstr "Vigencia Precio a DIMS Final"
+
+#. module: mh_campos_extra
+#: field:product.template,dim_price_vigency_ini:0
+msgid "Dim Price Vigency Initial"
+msgstr "Vigencia Precio a DIMS Inicial"
+
+#. module: mh_campos_extra
+#: field:res.partner,discount_percent:0
+msgid "Discount Percent"
+msgstr "Porcentaje de Descuento"
+
+#. module: mh_campos_extra
+#: selection:res.partner,id_type:0
+msgid "Empleado"
+msgstr "Empleado"
+
+#. module: mh_campos_extra
+#: field:product.template,employee_price:0
+msgid "Employee Price"
+msgstr "Precio Empleado"
+
+#. module: mh_campos_extra
+#: field:product.template,employee_price_vigency_fin:0
+msgid "Employee Price Vigency Final"
+msgstr "Vigencia Inicial para precio Empleado"
+
+#. module: mh_campos_extra
+#: field:product.template,employee_price_vigency_ini:0
+msgid "Employee Price Vigency Initial"
+msgstr "Vigencia Final para precio Empleado"
+
+#. module: mh_campos_extra
+#: field:res.partner,exterior_number:0 field:res.partner,notes:0
+msgid "Exterior Number"
+msgstr "Numero Exterior"
+
+#. module: mh_campos_extra
+#: field:res.partner,has_address_proof:0
+msgid "Has Adress Proof"
+msgstr "Tiene Comprobante de Domicilio?"
+
+#. module: mh_campos_extra
+#: field:res.partner,id_bank:0
+msgid "ID Bank"
+msgstr "Banco"
+
+#. module: mh_campos_extra
+#: field:res.partner,id_difussion_media:0
+msgid "ID Diffussion Media"
+msgstr "Medio de Difusion"
+
+#. module: mh_campos_extra
+#: field:res.partner,id_dim:0
+msgid "ID Dim"
+msgstr "DIM"
+
+#. module: mh_campos_extra
+#: field:res.partner,id_iva_group:0
+msgid "ID Iva Group"
+msgstr "Grupo de IVA"
+
+#. module: mh_campos_extra
+#: field:res.partner,id_marital_status:0
+msgid "ID Marital Status"
+msgstr "Estado Civil"
+
+#. module: mh_campos_extra
+#: field:res.partner,id_sex:0
+msgid "ID Sex"
+msgstr "Sexo"
+
+#. module: mh_campos_extra
+#: field:sale.order,id_dim:0
+msgid "Id Dim"
+msgstr "DIM"
+
+#. module: mh_campos_extra
+#: field:res.partner,is_OfficialId:0
+msgid "Id Official ?"
+msgstr "Es  Oficial ?"
+
+#. module: mh_campos_extra
+#: field:sale.order,id_shop:0
+msgid "Id Shop"
+msgstr "CNV"
+
+#. module: mh_campos_extra
+#: field:sale.order,id_type_invoice:0
+msgid "Id Type Invoice"
+msgstr "Tipo de Factura"
+
+#. module: mh_campos_extra
+#: field:res.partner,id_type:0
+msgid "Id Type MegaWeb"
+msgstr "Tipo de DIM"
+
+#. module: mh_campos_extra
+#: field:sale.order,id_type_dim:0
+msgid "Id type Dim"
+msgstr "Tipo de DIM"
+
+#. module: mh_campos_extra
+#: field:res.partner,interior_number:0
+msgid "Interior Number"
+msgstr "Numero Interior"
+
+#. module: mh_campos_extra
+#: field:account.invoice.line,id_invoice_detail:0
+msgid "Invoice Detail"
+msgstr "Detalle de Factura"
+
+#. module: mh_campos_extra
+#: model:ir.model,name:mh_campos_extra.model_account_invoice_line
+msgid "Invoice Line"
+msgstr "Línea de factura"
+
+#. module: mh_campos_extra
+#: field:res.partner,key_account:0
+msgid "Key bank_account"
+msgstr "Cuenta Bancaria"
+
+#. module: mh_campos_extra
+#: field:res.partner,last_name:0
+msgid "Last Name"
+msgstr "Apellido Paterno"
+
+#. module: mh_campos_extra
+#: field:res.partner,low_date:0
+msgid "Low Date"
+msgstr "Fecha de Baja"
+
+#. module: mh_campos_extra
+#: view:product.template:mh_campos_extra.view_product_mh_extrafields_inherit_form
+msgid "MH Sale Forecast KPI"
+msgstr "MH Forecast de Ventas KPI"
+
+#. module: mh_campos_extra
+#: field:res.partner,max_consignable_amount:0
+msgid "Max Consignable Amount"
+msgstr "Cantidad Maxima Consignable"
+
+#. module: mh_campos_extra
+#: field:res.partner,modified_by:0
+msgid "Modified By"
+msgstr "Modificado Por"
+
+#. module: mh_campos_extra
+#: field:res.partner,modified_on:0
+msgid "Modified On"
+msgstr "Modificado en"
+
+#. module: mh_campos_extra
+#: field:res.partner,mother_maiden_name:0
+msgid "MotherMaidenName"
+msgstr "Apellido Materno"
+
+#. module: mh_campos_extra
+#: field:mrp.bom.line,bom_mule_sync:0 field:product.template,mule_sync:0
+msgid "Mule Sync Flag"
+msgstr "Mule Sync Flag"
+
+#. module: mh_campos_extra
+#: field:res.partner,need_invoice:0
+msgid "Need Invoice"
+msgstr "Necesita Factura"
+
+#. module: mh_campos_extra
+#: field:sale.order,ref_nova_invoice:0
+msgid "Nova Invoice"
+msgstr "Numero de Factura NOVA"
+
+#. module: mh_campos_extra
+#: field:sale.order,official_consecutive:0
+msgid "Official Consecutive"
+msgstr "Consecutivo Oficial"
+
+#. module: mh_campos_extra
+#: field:sale.order.line,id_operation_detail:0
+msgid "Operation Detail"
+msgstr "Operation Detail"
+
+#. module: mh_campos_extra
+#: model:ir.model,name:mh_campos_extra.model_res_partner
+msgid "Partner"
+msgstr "Empresa"
+
+#. module: mh_campos_extra
+#: field:res.partner,phone_office:0
+msgid "Phone Office"
+msgstr "Telefono de Oficina"
+
+#. module: mh_campos_extra
+#: field:res.partner,point_amount:0
+msgid "Point Amount"
+msgstr "Base Compensable Acumulada"
+
+#. module: mh_campos_extra
+#: field:res.partner,point_amount_date:0
+msgid "Point Amount Date"
+msgstr "Fecha de Base Compensable"
+
+#. module: mh_campos_extra
+#: field:res.partner,point_amount_in_last_cut:0
+msgid "Point Amount in last Cut"
+msgstr "Base Compensable Ultimo Corte"
+
+#. module: mh_campos_extra
+#: field:product.template,points:0
+msgid "Points"
+msgstr "Base Compensable"
+
+#. module: mh_campos_extra
+#: field:product.template,product_forecast_01:0
+msgid "Product Forecast 01"
+msgstr "Forecast Enero"
+
+#. module: mh_campos_extra
+#: field:product.template,product_forecast_02:0
+msgid "Product Forecast 02"
+msgstr "Forecast Febrero"
+
+#. module: mh_campos_extra
+#: field:product.template,product_forecast_03:0
+msgid "Product Forecast 03"
+msgstr "Forecast Marzo"
+
+#. module: mh_campos_extra
+#: field:product.template,product_forecast_04:0
+msgid "Product Forecast 04"
+msgstr "Forecast Abril"
+
+#. module: mh_campos_extra
+#: field:product.template,product_forecast_05:0
+msgid "Product Forecast 05"
+msgstr "Forecast Mayo"
+
+#. module: mh_campos_extra
+#: field:product.template,product_forecast_06:0
+msgid "Product Forecast 06"
+msgstr "Forecast Junio"
+
+#. module: mh_campos_extra
+#: field:product.template,product_forecast_07:0
+msgid "Product Forecast 07"
+msgstr "Forecast Julio"
+
+#. module: mh_campos_extra
+#: field:product.template,product_forecast_08:0
+msgid "Product Forecast 08"
+msgstr "Forecast Agosto"
+
+#. module: mh_campos_extra
+#: field:product.template,product_forecast_09:0
+msgid "Product Forecast 09"
+msgstr "Forecast Septiembre"
+
+#. module: mh_campos_extra
+#: field:product.template,product_forecast_10:0
+msgid "Product Forecast 10"
+msgstr "Forecast Octubre"
+
+#. module: mh_campos_extra
+#: field:product.template,product_forecast_11:0
+msgid "Product Forecast 11"
+msgstr "Forecast Noviembre"
+
+#. module: mh_campos_extra
+#: field:product.template,product_forecast_12:0
+msgid "Product Forecast 12"
+msgstr "Forecast Diciembre"
+
+#. module: mh_campos_extra
+#: model:ir.model,name:mh_campos_extra.model_product_template
+msgid "Product Template"
+msgstr "Plantilla de producto"
+
+#. module: mh_campos_extra
+#: field:product.template,promotion:0
+msgid "Promotion"
+msgstr "Promocion"
+
+#. module: mh_campos_extra
+#: model:ir.model,name:mh_campos_extra.model_sale_order
+msgid "Sales Order"
+msgstr "Pedido de venta"
+
+#. module: mh_campos_extra
+#: model:ir.model,name:mh_campos_extra.model_sale_order_line
+msgid "Sales Order Line"
+msgstr "Línea pedido de venta"
+
+#. module: mh_campos_extra
+#: field:res.partner,sales_retention:0
+msgid "Sales Retention"
+msgstr "Retencion en Ventas"
+
+#. module: mh_campos_extra
+#: field:res.partner,id_sponsor:0
+msgid "Sponsor"
+msgstr "Patrocinador"
+
+#. module: mh_campos_extra
+#: field:res.partner,spouse_last_name:0
+msgid "Spouse LastName"
+msgstr "Apellido de Esposa"
+
+#. module: mh_campos_extra
+#: field:res.partner,spouse_mother_maiden_name:0
+msgid "Spouse Mother Maiden Name"
+msgstr "Apellido Materno de Esposa"
+
+#. module: mh_campos_extra
+#: field:res.partner,spouse_name:0
+msgid "Spouse Name"
+msgstr "Nombre de Esposa"
+
+#. module: mh_campos_extra
+#: field:res.partner,string2:0
+msgid "String 2"
+msgstr "String 2"
+
+#. module: mh_campos_extra
+#: field:res.partner,string1:0
+msgid "String1"
+msgstr "String1"
+
+#. module: mh_campos_extra
+#: field:res.partner,sucursal:0
+msgid "Sucursal"
+msgstr "Sucursal"
+
+#. module: mh_campos_extra
+#: field:res.partner,tax_register:0
+msgid "Tax Register"
+msgstr "Registro de Impuesto"
+
+#. module: mh_campos_extra
+#: field:res.partner,tax_retention:0
+msgid "Tax Retention"
+msgstr "Retencion de Impuesto"
+
+#. module: mh_campos_extra
+#: view:sale.order:mh_campos_extra.inherit_view_search_mh_sales_filter
+#: view:sale.order:mh_campos_extra.inherit_view_tree_mh_sales_filter
+msgid "Ticket"
+msgstr "Ticket"
+
+#. module: mh_campos_extra
+#: model:ir.model,name:mh_campos_extra.model_res_users
+msgid "Users"
+msgstr "Usuarios"

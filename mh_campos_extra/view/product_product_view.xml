@@ -10,15 +10,41 @@
                 <xpath expr="//page[@string='Information']" position="before">
                      <page name="mh" string="MH">
                         <group>
-                            <field name="promotion"/>
-                            <field name="code"/>
-                            <field name="barcode"/>
-                            <field name="employee_price"/>
-                            <field name="points"/>
-                            <field name="dim_price_vigency_ini"/>
-                            <field name="dim_price_vigency_fin"/>
-                            <field name="employee_price_vigency_ini"/>
-                            <field name="employee_price_vigency_fin"/>
+                            <group>
+                                <field name="promotion"/>
+                                <field name="code"/>
+                                <field name="barcode"/>
+                                <field name="employee_price"/>
+                                <field name="points"/>
+                            </group>
+                            <group>
+                                <field name="dim_price_vigency_ini"/>
+                                <field name="dim_price_vigency_fin"/>
+                                <field name="employee_price_vigency_ini"/>
+                                <field name="employee_price_vigency_fin"/>
+                            </group>
+                        </group>
+                     </page>
+                </xpath>
+                <xpath expr="//page[@name='variants']" position="after">
+                    <page name="mh_forecast" string="MH Sale Forecast KPI">
+                        <group>
+                            <group>
+                                <field name="product_forecast_01"/>
+                                <field name="product_forecast_02"/>
+                                <field name="product_forecast_03"/>
+                                <field name="product_forecast_04"/>
+                                <field name="product_forecast_05"/>
+                                <field name="product_forecast_06"/>
+                            </group>
+                            <group>
+                                <field name="product_forecast_07"/>
+                                <field name="product_forecast_08"/>
+                                <field name="product_forecast_09"/>
+                                <field name="product_forecast_10"/>
+                                <field name="product_forecast_11"/>
+                                <field name="product_forecast_12"/>
+                            </group>
                         </group>
                      </page>
                 </xpath>

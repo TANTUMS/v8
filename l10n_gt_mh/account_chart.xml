@@ -395,6 +395,16 @@
             <field name="user_type" ref="cuenta_activo"/>
         </record>
 
+        <record id="cta1140104" model="account.account.template">
+            <field name="code">1140104</field>
+            <field name="name">Mercancia Recibida no Facturada</field>
+            <field ref="cta11401" name="parent_id"/>
+            <field name="type">other</field>
+            <field name="user_type" ref="cuenta_activo"/>
+        </record>
+
+
+
         <record id="cta12" model="account.account.template">
             <field name="code">12</field>
             <field name="name">NO CORRIENTE</field>
@@ -581,6 +591,7 @@
             <field name="user_type" ref="cuenta_cxp"/>
         </record>
 
+         
         <record id="cta212" model="account.account.template">
             <field name="code">212</field>
             <field name="name">CUENTAS POR PAGAR</field>

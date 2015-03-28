@@ -8,16 +8,17 @@
             <field name="type">form</field>
             <field name="arch" type="xml">
                 <xpath expr="/form/sheet/notebook/page[@name='internal_notes']" position="before">
-                       <page name="mh_fields" string="MH">
+                       <page name="mh_fields" string="MH" autofocus="autofocus">
                             <group>
                                     <div align="right">
                                         <group>
-                                            <field name="id_dim" readonly="True"/>
+                                            <field name="id_dim"/>
                                             <field name="id_sponsor" readonly="True"/>
                                             <field name="calification" readonly="True"/>
                                             <field name="last_name" readonly="True"/>
                                             <field name="mother_maiden_name" readonly="True"/>
                                             <field name="co_holder" readonly="True"/>
+                                            <field name="id_type"/>
                                         </group>
                                     </div>
                                     <div>
@@ -33,10 +34,6 @@
                                     </div>
                             </group>
                         </page>
-                </xpath>
-                <xpath expr="//field[@name='category_id']" position="after">
-                    <label for="id_dim"/>
-                    <field name="id_dim" readonly="True"/>
                 </xpath>
             </field>
         </record>
