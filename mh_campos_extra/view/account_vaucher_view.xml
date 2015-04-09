@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="view_mh_voucher_order_form_inherit" model="ir.ui.view">
+            <field name="name">voucher.order.form.inherit</field>
+            <field name="model">account.voucher</field>
+            <field name="inherit_id" ref="account_voucher.view_vendor_receipt_form"/>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='name']" position="after">
+                    <field name="id_shop"/>
+                </xpath>
+                 
+            </field>
+        </record>
+
+        <record id="inherit_view_search_mh_voucher_filter" model="ir.ui.view">
+            <field name="name">MH Voucher </field>
+            <field name="model">account.voucher</field>
+            <field name="inherit_id" ref="account_voucher.view_voucher_filter_customer_pay" />
+            <field name="arch" type="xml">
+
+               <!-- add your filtre at the end -->
+                <xpath expr="field[@name='number']" position="before">
+                    <field name="journal_id" string="Metodo de Pago"/>
+                </xpath>
+
+               <!-- add your group at the end -->
+                <xpath expr="//filter[@string='Status']"  position="after">
+                    <filter string="CNV" domain="[]" context="{'group_by':'id_shop'}"/>
+                    <filter string="SEMANA" domain="[('date','&lt;=', (datetime.date.today() + relativedelta(weeks=0,day=7, weekday=-1)).strftime('%%Y-%%m-%%d')),('date','&gt;=',(datetime.date.today() - relativedelta(weeks=1, weekday=0)).strftime('%%Y-%%m-%%d'))]" context="{'group_by':'date'}"/>
+                    <filter string="HOY" domain="[('date','&lt;=', datetime.date.today().strftime('%%Y-%%m-%%d')),('date','&gt;=',datetime.date.today().strftime('%%Y-%%m-%%d'))]" context="{'group_by':'date'}"/>
+                </xpath>                                    
+                </field>
+            </record>
+
+
+            <record id="inherit_view_tree_mh_voucher_filter" model="ir.ui.view">
+                <field name="name">MH Voucher tree </field>
+                <field name="model">account.voucher</field>
+                <field name="inherit_id" ref="account_voucher.view_voucher_tree"/>
+                <field name="arch" type="xml">
+
+                    <xpath expr="field[@name='number']" position="after">
+                        <field name="id_shop" string="CNV"/>
+                    </xpath>
+
+                </field>
+            </record>
+    </data>
+</openerp>

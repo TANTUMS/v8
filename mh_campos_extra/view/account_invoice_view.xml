@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+ <record id="inherit_view_tree_mh_invoices_filter" model="ir.ui.view">
+                <field name="name">MH Invoices tree </field>
+                <field name="model">account.invoice</field>
+                <field name="inherit_id" ref="account.invoice_tree"/>
+                <field name="arch" type="xml">
+
+                    <xpath expr="field[@name='number']" position="after">
+                        <field name="cost_center_id" string="CNV"/>
+                    </xpath>
+
+                </field>
+            </record>
+
+            <record id="inherit_view_search_mh_invoices_filter" model="ir.ui.view">
+            <field name="name">MH Invoices </field>
+            <field name="model">account.invoice</field>
+            <field name="inherit_id" ref="account.view_account_invoice_filter" />
+            <field name="arch" type="xml">
+
+               <!-- add your filtre at the end -->
+                <xpath expr="field[@name='partner_id']" position="before">
+                    <field name="cost_center_id" string="CNV"/>
+                </xpath>
+
+               <!-- add your group at the end -->
+                <xpath expr="//filter[@string='Due Month']"  position="after">
+                    <filter string="CNV" domain="[]" context="{'group_by':'cost_center_id'}"/>
+                    <filter string="SEMANA" domain="[('date_invoice','&lt;=', (datetime.date.today() + relativedelta(weeks=0,day=7, weekday=-1)).strftime('%%Y-%%m-%%d')),('date_invoice','&gt;=',(datetime.date.today() - relativedelta(weeks=1, weekday=0)).strftime('%%Y-%%m-%%d'))]" context="{'group_by':'date_invoice'}"/>
+                    <filter string="HOY" domain="[('date_invoice','&lt;=', datetime.date.today().strftime('%%Y-%%m-%%d')),('date_invoice','&gt;=',datetime.date.today().strftime('%%Y-%%m-%%d'))]" context="{'group_by':'date_invoice'}"/>
+                </xpath>                                    
+                </field>
+            </record>
+    </data>
+</openerp>

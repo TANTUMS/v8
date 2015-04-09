@@ -21,12 +21,12 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base'],
+    'depends': ['base','account'],
 
     # always loaded
     'data': [
         # 'security/ir.model.access.csv',
-        'templates.xml','view/template_cuadre_ingresos.xml'
+        'templates.xml' ,'view/account_report.xml','view/report_incomes_match.xml'
     ],
     # only loaded in demonstration mode
     'demo': [

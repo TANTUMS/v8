@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+		<report id="report_incomes_match" model="account.invoice" string="Reporte de Cuadre Ventas-Fact-Pagos" report_type="qweb-pdf" name="mh_account_reports.report_incomes_match_template" attachment_use="False" file="mh_account_reports.report_incomes_match_template"/>
+	</data>
+</openerp>

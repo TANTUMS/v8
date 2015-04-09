@@ -127,3 +127,8 @@ class res_users(models.Model):
     _inherit ='res.users'
 
     warehouse_uid_id = fields.One2many(comodel_name='stock.warehouse',inverse_name='id', string='Almacen')	
+
+class mh_account_voucher(models.Model):
+    _inherit ='account.voucher'
+
+    id_shop = fields.Char('CNV o Tienda', readonly=True)	

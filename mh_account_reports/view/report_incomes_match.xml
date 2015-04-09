@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Custom report.-->
+<openerp>
+<data>
+<template id="report_incomes_match_document">
+    <t t-call="report.external_layout">
+        <div class="page">
+            <div class="row">
+                <h3>CUADRE DE INGRESOS</h3>
+            </div>
+            <t t-set="total_facturas" t-value="0"/>
+            <t t-set="total_ventas" t-value="0"/>
+            <t t-set="total_pagos" t-value="0"/>
+            <tbody class="invoice_tbody">
+                    <tr t-foreach="get_invoices('2015-04-01','8001')" t-as="l">
+                        <t t-set="total_facturas" t-value="total_facturas + float(l[0].amount_total) "/>
+                     </tr>
+                     <tr t-foreach="get_sales('2015-04-01')" t-as="l">
+                        <t t-set="total_ventas" t-value="total_ventas + float(l[0].amount_total) "/>
+                     </tr>
+                      <tr t-foreach="get_vouchers('2015-04-01')" t-as="l">
+                        <t t-set="total_pagos" t-value="total_pagos + float(l[0].amount) "/>
+                     </tr>
+                     <t t-esc="total_facturas "/>
+                     <t t-esc="total_ventas "/>
+                     <t t-esc="total_pagos "/> 
+            </tbody>
+        </div>
+     
+    </t>
+</template>
+
+<template id="report_incomes_match_template">
+    <t t-call="report.html_container">
+        <t t-foreach="doc_ids" t-as="doc_id">
+            <t t-raw="translate_doc(doc_id, doc_model, 'partner_id.lang', 'mh_account_reports.report_incomes_match_document')"/>
+        </t>
+    </t>
+</template>
+</data>
+</openerp>

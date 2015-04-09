@@ -30,11 +30,15 @@
                 <xpath expr="field[@name='name']" position="before">
                     <field name="official_consecutive" string="Ticket"/>
                     <field name="id_dim" string="DIM"/>
+                    <field name="centro_costo_id" string="CNV"/>
                 </xpath>
 
                <!-- add your group at the end -->
                 <xpath expr="//filter[@string='Order Month']"  position="after">
                     <filter string="DIM" domain="[]" context="{'group_by':'id_dim'}"/>
+                    <filter string="CNV" domain="[]" context="{'group_by':'centro_costo_id'}"/>
+                    <filter string="SEMANA" domain="[('date_order','&lt;=', (datetime.date.today() + relativedelta(weeks=0,day=7, weekday=-1)).strftime('%%Y-%%m-%%d')),('date_order','&gt;=',(datetime.date.today() - relativedelta(weeks=1, weekday=0)).strftime('%%Y-%%m-%%d'))]" context="{'group_by':'date_order'}"/>
+                    <filter string="HOY" domain="[('date_order','&lt;=', datetime.date.today().strftime('%%Y-%%m-%%d')),('date_order','&gt;=',datetime.date.today().strftime('%%Y-%%m-%%d'))]" context="{'group_by':'date_order'}"/>
                 </xpath>                                    
                 </field>
             </record>
@@ -47,6 +51,7 @@
                     <xpath expr="field[@name='name']" position="after">
                         <field name="official_consecutive" string="Ticket"/>
                         <field name="id_dim" string="DIM"/>
+                        <field name="centro_costo_id" string="CNV"/>
                     </xpath>
 
                 </field>
