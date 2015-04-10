@@ -25,6 +25,7 @@ from openerp.report import report_sxw
 import pytz
 import datetime, time
 from openerp import SUPERUSER_ID
+import pdb
 
 
 class payslip_report(report_sxw.rml_parse):
@@ -34,11 +35,41 @@ class payslip_report(report_sxw.rml_parse):
         self.localcontext.update({
             'get_sales':self.get_sales,
             'get_invoices': self.get_invoices,
-            'get_vouchers' : self.get_vouchers
+            'get_vouchers' : self.get_vouchers,
+            'get_id_shops' : self.get_id_shops
         })
 
 
+    def get_id_shops(self):
 
+        idshops= self.pool.get('account.cost.center')
+        idshops_id=idshops.search(self.cr,self.uid,[]) # All cost center
+        shop_obj=idshops.browse(self.cr,self.uid,idshops_id)
+        res=[]
+        for i in shop_obj:
+             
+            invoice = self.get_invoices('2015-04-01',i.name)
+            sales   = self.get_sales('2015-04-01',i.name)
+            vouchers= self.get_vouchers('2015-04-01',i.name)
+ 
+            
+            sum_sale     = 0.00
+            sum_invoices = 0.00
+            sum_vouchers = 0.00
+            for a in sales:
+                sum_sale = sum_sale +  a.amount_total
+            for m in invoice:
+                sum_invoices = sum_invoices +  m.amount_total
+            for v in vouchers:
+                sum_vouchers = sum_vouchers +  v.amount
+
+            if sum_sale > 0:
+                res.append(i.name)
+                res.append(sum_sale)
+                res.append(sum_invoices)
+                res.append(sum_vouchers)
+        print res
+        return res   
 
 
 
@@ -62,8 +93,7 @@ class payslip_report(report_sxw.rml_parse):
             print res
         return res
 
-    def get_sales(self,fecha):
-
+    def get_sales(self,fecha,shop):
 
         # get user's timezone
         user_pool = self.pool.get('res.users')
@@ -82,7 +112,7 @@ class payslip_report(report_sxw.rml_parse):
         print 'aqui la fecha nueva' + str(fecha_final)
         sales = self.pool.get('sale.order')
         print sales
-        sales_ids = sales.search(self.cr,self.uid,[('date_order' ,'>=' ,fecha),('date_order' ,'>=' ,fecha_final)])
+        sales_ids = sales.search(self.cr,self.uid,[('date_order' ,'>=' ,fecha),('date_order' ,'>=' ,fecha_final),('centro_costo_id','=',shop)])
         print str(sales_ids) + 'aqui ando ya en los id' #,('state','in','manual')
         res = []
         ids = []
@@ -91,7 +121,7 @@ class payslip_report(report_sxw.rml_parse):
         return res
 
 
-    def get_vouchers(self,fecha):
+    def get_vouchers(self,fecha,shop):
         # get user's timezone
         user_pool = self.pool.get('res.users')
         user = user_pool.browse(self.cr, SUPERUSER_ID, self.uid)
@@ -102,7 +132,7 @@ class payslip_report(report_sxw.rml_parse):
         # date_to   = pytz.utc.localize(datetime.datetime.strptime(date_to, DATETIME_FORMAT)).astimezone(tz)
         vouchers = self.pool.get('account.voucher')
         print vouchers
-        vouchers_ids = vouchers.search(self.cr,self.uid,[('date' ,'>=' ,fecha),('date' ,'<=' ,fecha_final)])
+        vouchers_ids = vouchers.search(self.cr,self.uid,[('date' ,'>=' ,fecha),('date' ,'<=' ,fecha_final),('id_shop','=',shop)])
         print vouchers_ids
         res = []
         ids = []

@@ -9,6 +9,7 @@
 
                     <xpath expr="field[@name='number']" position="after">
                         <field name="cost_center_id" string="CNV"/>
+                        <field name="reference" string="Factura"/>
                     </xpath>
 
                 </field>
@@ -23,6 +24,7 @@
                <!-- add your filtre at the end -->
                 <xpath expr="field[@name='partner_id']" position="before">
                     <field name="cost_center_id" string="CNV"/>
+                    <field name="reference" string="Factura-Nova"/>
                 </xpath>
 
                <!-- add your group at the end -->

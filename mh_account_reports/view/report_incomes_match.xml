@@ -12,18 +12,20 @@
             <t t-set="total_ventas" t-value="0"/>
             <t t-set="total_pagos" t-value="0"/>
             <tbody class="invoice_tbody">
+                    
                     <tr t-foreach="get_invoices('2015-04-01','8001')" t-as="l">
                         <t t-set="total_facturas" t-value="total_facturas + float(l[0].amount_total) "/>
                      </tr>
-                     <tr t-foreach="get_sales('2015-04-01')" t-as="l">
+                     <tr t-foreach="get_sales('2015-04-01','8001')" t-as="l">
                         <t t-set="total_ventas" t-value="total_ventas + float(l[0].amount_total) "/>
                      </tr>
-                      <tr t-foreach="get_vouchers('2015-04-01')" t-as="l">
+                      <tr t-foreach="get_vouchers('2015-04-01','8001')" t-as="l">
                         <t t-set="total_pagos" t-value="total_pagos + float(l[0].amount) "/>
                      </tr>
                      <t t-esc="total_facturas "/>
                      <t t-esc="total_ventas "/>
                      <t t-esc="total_pagos "/> 
+                     <t t-esc="get_id_shops()"/>
             </tbody>
         </div>
      

@@ -131,4 +131,9 @@ class res_users(models.Model):
 class mh_account_voucher(models.Model):
     _inherit ='account.voucher'
 
-    id_shop = fields.Char('CNV o Tienda', readonly=True)	
+    id_shop = fields.Char('CNV o Tienda', readonly=True)
+
+class mh_invoice_header(models.Model):
+	_inherit = 'account.invoice'
+
+	folio_factura = fields.Char('Folio Factura Nova', readonly=True)	
