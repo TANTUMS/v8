@@ -5,28 +5,45 @@
 <template id="report_incomes_match_document">
     <t t-call="report.external_layout">
         <div class="page">
-            <div class="row">
+            <span t-field="get_company().logo_web" t-field-options="{&quot;widget&quot;: &quot;image&quot;, &quot;class&quot;: &quot;img-rounded&quot;}"/>
+            <div class="text-center">
                 <h3>CUADRE DE INGRESOS</h3>
             </div>
             <t t-set="total_facturas" t-value="0"/>
             <t t-set="total_ventas" t-value="0"/>
             <t t-set="total_pagos" t-value="0"/>
+            <table class="table table-condensed">
+                <thead>
+                    <tr>
+                        <th style="width:25%;">Tienda o CNV</th>
+                        <th style="width:25%;">Venta Total</th>
+                        <th style="width:25%;">Facturacion Total</th>
+                        <th style="width:25%;">Cobros Total</th>
+                    </tr>
+                </thead>
             <tbody class="invoice_tbody">
-                    
-                    <tr t-foreach="get_invoices('2015-04-01','8001')" t-as="l">
+                <tr t-foreach="get_id_shops()" t-as="m">
+                    <tr t-foreach="get_invoices(data['form']['date_report'],m.name)" t-as="l">
                         <t t-set="total_facturas" t-value="total_facturas + float(l[0].amount_total) "/>
                      </tr>
-                     <tr t-foreach="get_sales('2015-04-01','8001')" t-as="l">
+                     <tr t-foreach="get_sales(data['form']['date_report'],m.name)" t-as="l">
                         <t t-set="total_ventas" t-value="total_ventas + float(l[0].amount_total) "/>
                      </tr>
-                      <tr t-foreach="get_vouchers('2015-04-01','8001')" t-as="l">
+                      <tr t-foreach="get_vouchers(data['form']['date_report'],m.name)" t-as="l">
                         <t t-set="total_pagos" t-value="total_pagos + float(l[0].amount) "/>
                      </tr>
-                     <t t-esc="total_facturas "/>
-                     <t t-esc="total_ventas "/>
-                     <t t-esc="total_pagos "/> 
-                     <t t-esc="get_id_shops()"/>
+                     <t t-if="total_ventas > 0">
+                        <td style="width:25%;"><span t-esc="m.name"/></td>
+                        <td style="width:25%;"><span t-esc="total_ventas"/></td>
+                        <td style="width:25%;"><span t-esc="total_facturas"/></td>
+                        <td style="width:25%;"><span t-esc="total_pagos"/></td>
+                     </t>
+                     <t t-set="total_facturas" t-value="0"/>
+                     <t t-set="total_ventas" t-value="0"/>
+                     <t t-set="total_pagos" t-value="0"/>
+                </tr>
             </tbody>
+        </table>
         </div>
      
     </t>
@@ -35,7 +52,7 @@
 <template id="report_incomes_match_template">
     <t t-call="report.html_container">
         <t t-foreach="doc_ids" t-as="doc_id">
-            <t t-raw="translate_doc(doc_id, doc_model, 'partner_id.lang', 'mh_account_reports.report_incomes_match_document')"/>
+               <t t-raw="translate_doc(doc_id, doc_model,'partner_id.lang','mh_account_reports.report_incomes_match_document')"/>
         </t>
     </t>
 </template>
