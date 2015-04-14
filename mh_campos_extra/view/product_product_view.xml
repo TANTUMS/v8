@@ -50,5 +50,22 @@
                 </xpath>
             </field>
         </record>
+          <record id="inherit_view_search_mh_product_filter" model="ir.ui.view">
+            <field name="name">MH Product </field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="product.product_template_search_view" />
+            <field name="arch" type="xml"> 
+
+               <!-- add your filtre at the end -->
+                <xpath expr="field[@name='company_id']" position="before">
+                    <field name="default_code" string="Codigo"/>
+                </xpath>
+
+               <!-- add your group at the end -->
+                <xpath expr="//filter[@string='Type']"  position="after">
+                    <filter string="Promociones" domain="[]" context="{'group_by':'promotion'}"/>
+                </xpath>                                    
+                </field>
+            </record>
     </data>    
 </openerp>
